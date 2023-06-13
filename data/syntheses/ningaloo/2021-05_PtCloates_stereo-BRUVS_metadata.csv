@@ -1,0 +1,25 @@
+"campaignid","sample","latitude","longitude","date.time","site","location","status","depth","successful.count","successful.length","observer.count","observer.length"
+"2021-05_PtCloates_stereo-BRUVS","17",-22.7757,113.5195,"2021-05-18T12:28:00+08:00","outNP.5","Point Cloates","Fished","104","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","22",-22.7812,113.4964,"2021-05-18T12:19:00+08:00","outNP.10","Point Cloates","Fished","138","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","25",-22.7937,113.4939,"2021-05-18T12:11:00+08:00","outNP.13","Point Cloates","Fished","135","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","15",-22.7461,113.5138,"2021-05-18T12:40:00+08:00","outNP.3","Point Cloates","Fished","130","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","7",-22.7287,113.5365,"2021-05-18T12:57:00+08:00","inNP.7","Point Cloates","No-take","100","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","13",-22.7963,113.5041,"2021-05-18T12:08:00+08:00","outNP.1","Point Cloates","Fished","116","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","12",-22.7262,113.5214,"2021-05-18T12:48:00+08:00","inNP.12","Point Cloates","No-take","126","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","16",-22.7812,113.5115,"2021-05-18T12:24:00+08:00","outNP.4","Point Cloates","Fished","111","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","21",-22.7563,113.5189,"2021-05-18T12:36:00+08:00","outNP.9","Point Cloates","Fished","112","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","6",-22.721,113.5465,"2021-05-18T14:41:00+08:00","inNP.6","Point Cloates","No-take","88.5","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","2",-22.7108,113.5386,"2021-05-18T14:46:00+08:00","inNP.2","Point Cloates","No-take","104","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","3",-22.7087,113.5263,"2021-05-18T14:51:00+08:00","inNP.3","Point Cloates","No-take","129","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","4",-22.6937,113.5413,"2021-05-18T15:00:00+08:00","inNP.4","Point Cloates","No-take","110","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","27",-22.7027,113.556,"2021-05-18T15:06:00+08:00",NA,"Point Cloates","No-take","77.8","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","8",-22.6884,113.5563,"2021-05-18T15:12:00+08:00","inNP.8","Point Cloates","No-take","89.3","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","11",-22.6761,113.5387,"2021-05-18T15:20:00+08:00","inNP.11","Point Cloates","No-take","139","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","10",-22.6734,113.524,"2021-05-18T15:27:00+08:00","inNP.10","Point Cloates","No-take","197","Yes",NA,"Charlotte",NA
+"2021-05_PtCloates_stereo-BRUVS","5",-22.6837,113.5139,"2021-05-19T07:59:00+08:00","inNP.5","Point Cloates","No-take","206","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","9",-22.6962,113.5064,"2021-05-19T08:27:00+08:00","inNP.9","Point Cloates","No-take","207","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","18",-22.7311,113.4913,"2021-05-19T08:40:00+08:00","outNP.6","Point Cloates","Fished","204","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","23",-22.7362,113.4887,"2021-05-19T08:42:00+08:00","outNP.11","Point Cloates","Fished","204","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","14",-22.7413,113.4991,"2021-05-19T08:48:00+08:00","outNP.2","Point Cloates","Fished","179","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","19",-22.7437,113.484,"2021-05-19T08:53:00+08:00","outNP.7","Point Cloates","Fished","206","Yes",NA,"Gabby",NA
+"2021-05_PtCloates_stereo-BRUVS","26",-22.7537,113.4763,"2021-05-19T08:59:00+08:00","outNP.14","Point Cloates","Fished","209","Yes",NA,"Gabby",NA

@@ -1,0 +1,23 @@
+# To do list
+HIGH PRIORITY
+- Clean data for
+  - Geographe
+  - Ningaloo
+  - South-west corner (lowest priority)
+- Fix up script to download data
+- Write script to merge with life history information
+- Calculate abundance by size class for size of maturity
+- Plot with bubble plot by species and size class for indicator species
+- Temporal plot by zone
+
+
+- Duplicate combinations of ['caab', 'campaignid', 'sample'] in count files.
+- Unknown Annotation Subjects - probably SPPPPPPPPs.
+- Missing observer.X, despite being marked as successful.X
+- Referential integrity issues (missing referenced sample), but this is probably just a result of samples being dropped for above reasons.
+
+
+LOW PRIORITY
+- Turn habitat data into levels
+- Upload to synthesis on GlobalArchive API
+- Write script to summarise data and plot with scatter pies
