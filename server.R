@@ -1,6 +1,7 @@
 library(shinydashboard)
 library(leaflet)
 library(dplyr)
+library(leafsync)
 
 function(input, output, session) {
 
@@ -34,15 +35,31 @@ function(input, output, session) {
 
   output$leaflet <- renderLeaflet({
 
-    dat <- data() %>%
-      dplyr::filter(scientific %in% input$fish)
+    dat.small <- data() %>%
+      dplyr::filter(scientific %in% input$fish) %>%
+      dplyr::filter(class %in% "< 100%")
 
-    leaflet(dat) %>%
+    leaf.small <- leaflet(dat.small) %>%
       addTiles() %>%
       addCircleMarkers(
         radius = ~(count),
-        stroke = FALSE, fillOpacity = 0.5
-      )
+        stroke = FALSE, fillOpacity = 0.5)
+
+    dat.big <- data() %>%
+      dplyr::filter(scientific %in% input$fish) %>%
+      dplyr::filter(!class %in% "< 100%") %>%
+      glimpse()
+
+    leaf.big <- leaflet(dat.big) %>%
+      addTiles() %>%
+      addCircleMarkers(
+        radius = ~(count),
+        stroke = FALSE, fillOpacity = 0.5)
+
+    leaflets <- leafsync::sync(leaf.small, leaf.big)
+
+    leaflets
+
 
   })
 

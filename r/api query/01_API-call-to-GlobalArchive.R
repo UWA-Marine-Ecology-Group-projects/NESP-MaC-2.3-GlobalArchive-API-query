@@ -21,7 +21,6 @@ indicator_species <- c("Chrysophrys auratus",
                        "Lethrinus punctulatus",
                        "Epinephelus multinotatus",
                        "Pristipomoides multidens",
-                       "Pristipomoides spp",
                        "Lethrinus miniatus",
                        "Lethrinus nebulosus")
 
