@@ -33,7 +33,7 @@ function(input, output, session) {
 
   })
 
-  output$leaflet <- renderLeaflet({
+  output$leaflet <- renderUI({
 
     dat.small <- data() %>%
       dplyr::filter(scientific %in% input$fish) %>%

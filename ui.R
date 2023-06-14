@@ -1,6 +1,7 @@
 library(shinydashboard)
 library(leaflet)
 library(dplyr)
+library(leafsync)
 
 dashboardPage(
   dashboardHeader(title = "Workshop Demo"),
@@ -36,7 +37,7 @@ dashboardPage(
                 box(
                   title = "Interactive spatial plot",
                   width = 12,
-                  leafletOutput("leaflet", height = "500px")
+                  uiOutput("leaflet", height = "500px")
                 )
               )
       ),
