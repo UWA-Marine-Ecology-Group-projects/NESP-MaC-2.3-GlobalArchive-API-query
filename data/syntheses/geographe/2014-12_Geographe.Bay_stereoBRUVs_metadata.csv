@@ -1,298 +1,298 @@
-"campaignid","sample","latitude","longitude","date.time","site","location","status","depth","successful.count","successful.length","observer.count","observer.length"
-"2014-12_Geographe.Bay_stereoBRUVs","1",-33.3635,115.2142,2014-12-10 05:20:00,"Geographe Bay","Geographe Bay","Fished",40,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","2",-33.4405,115.101,2014-12-09 22:29:00,"Geographe Bay","Geographe Bay","Fished",40.5,"Yes","Yes","Test video","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","3",-33.4921,115.3549,2014-12-13 00:41:00,"Geographe Bay","Geographe Bay","Fished",24.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","4",-33.3921,115.2281,2014-12-10 06:13:00,"Geographe Bay","Geographe Bay","Fished",38.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","5",-33.3628,115.455,2014-12-11 01:43:00,"Geographe Bay","Geographe Bay","Fished",25.7,"Yes","Yes","test video","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","6",-33.4071,115.1204,2014-12-09 23:55:00,"Geographe Bay","Geographe Bay","Fished",41.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","7",-33.4205,115.4457,2014-12-13 03:04:00,"Geographe Bay","Geographe Bay","Fished",23.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","9",-33.3643,115.1361,2014-12-10 02:04:00,"Geographe Bay","Geographe Bay","Fished",41.8,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","10",-33.5282,115.3313,2014-12-12 02:48:00,"Geographe Bay","Geographe Bay","Fished",22.7,"Yes","No","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","11",-33.5712,115.2958,2014-12-12 00:59:00,"Geographe Bay","Geographe Bay","Fished",21.7,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12",-33.404,115.2616,2014-12-10 06:00:00,"Geographe Bay","Geographe Bay","Fished",38.7,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13",-33.4502,115.0925,2014-12-09 05:41:00,"Geographe Bay","Geographe Bay","Fished",42.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","14",-33.5297,115.413,2014-12-12 21:56:00,"Geographe Bay","Geographe Bay","Fished",13.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","15",-33.5782,115.2148,2014-12-11 22:27:00,"Geographe Bay","Geographe Bay","Fished",26.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","16",-33.3889,115.4986,2014-12-11 04:21:00,"Geographe Bay","Geographe Bay","Fished",20,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","17",-33.3636,115.2327,2014-12-10 05:27:00,"Geographe Bay","Geographe Bay","Fished",38.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","18",-33.3926,115.0981,2014-12-09 23:44:00,"Geographe Bay","Geographe Bay","Fished",42.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","19",-33.4605,115.3618,2014-12-13 02:33:00,"Geographe Bay","Geographe Bay","Fished",26,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","20",-33.4339,115.2221,2014-12-10 03:09:00,"Geographe Bay","Geographe Bay","Fished",36,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","22",-33.5746,115.1807,2014-12-08 23:10:00,"Geographe Bay","Geographe Bay","Fished",22.6,"Yes","Yes","test video","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","23",-33.5042,115.4289,2014-12-16 03:29:00,"Geographe Bay","Geographe Bay","Fished",13.6,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","24",-33.4712,115.2862,2014-12-08 22:05:00,"Geographe Bay","Geographe Bay","Fished",29.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","25",-33.3833,115.0828,2014-12-09 23:10:00,"Geographe Bay","Geographe Bay","Fished",42.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","26",-33.55,115.3236,2014-12-12 03:02:00,"Geographe Bay","Geographe Bay","Fished",20.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","27",-33.5464,115.1884,2014-12-08 23:00:00,"Geographe Bay","Geographe Bay","Fished",28.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","28",-33.4272,115.2873,2014-12-10 23:07:00,"Geographe Bay","Geographe Bay","Fished",34,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","29",-33.487,115.1764,2014-12-09 02:30:00,"Geographe Bay","Geographe Bay","Fished",34.3,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","30",-33.4241,115.3341,2014-12-10 22:37:00,"Geographe Bay","Geographe Bay","Fished",31.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","31",-33.5986,115.2369,2014-12-11 21:55:00,"Geographe Bay","Geographe Bay","Fished",26.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","32",-33.4808,115.4621,2014-12-12 23:53:00,"Geographe Bay","Geographe Bay","Fished",14.1,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","33",-33.3528,115.3205,2014-12-11 00:54:00,"Geographe Bay","Geographe Bay","Fished",34.1,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","34",-33.3845,115.0739,2014-12-09 23:05:00,"Geographe Bay","Geographe Bay","Fished",43,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","35",-33.4055,115.4157,2014-12-13 03:14:00,"Geographe Bay","Geographe Bay","Fished",27.9,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","36",-33.4269,115.2077,2014-12-10 03:17:00,"Geographe Bay","Geographe Bay","Fished",38.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","37",-33.3585,115.3721,2014-12-11 01:11:00,"Geographe Bay","Geographe Bay","Fished",30.3,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","38",-33.5037,115.1274,2014-12-09 04:45:00,"Geographe Bay","Geographe Bay","Fished",34.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","39",-33.465,115.4329,2014-12-11 05:20:00,"Geographe Bay","Geographe Bay","Fished",19.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","40",-33.472,115.2287,2014-12-09 01:57:00,"Geographe Bay","Geographe Bay","Fished",33.7,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","41",-33.3679,115.0986,2014-12-09 23:35:00,"Geographe Bay","Geographe Bay","Fished",42.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","42",-33.5425,115.3862,2014-12-12 05:13:00,"Geographe Bay","Geographe Bay","No-take",13,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","44",-33.3984,115.3097,2014-12-10 22:54:00,"Geographe Bay","Geographe Bay","Fished",34.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","45",-33.4446,115.1317,2014-12-09 05:28:00,"Geographe Bay","Geographe Bay","Fished",41.1,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","47",-33.5485,115.2878,2014-12-12 02:29:00,"Geographe Bay","Geographe Bay","Fished",24.3,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","48",-33.4028,115.5134,2014-12-11 04:31:00,"Geographe Bay","Geographe Bay","Fished",17.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","49",-33.3809,115.2721,2014-12-10 05:51:00,"Geographe Bay","Geographe Bay","Fished",37.7,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","50",-33.4108,115.1742,2014-12-10 02:29:00,"Geographe Bay","Geographe Bay","Fished",40.5,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","51",-33.4316,115.4137,2014-12-13 02:52:00,"Geographe Bay","Geographe Bay","Fished",25.4,"Yes","No","Unknown",NA
-"2014-12_Geographe.Bay_stereoBRUVs","52",-33.4927,115.2982,2014-12-08 22:14:00,"Geographe Bay","Geographe Bay","Fished",29.7,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","53",-33.3582,115.3565,2014-12-11 01:04:00,"Geographe Bay","Geographe Bay","Fished",31.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","54",-33.5131,115.1532,2014-12-09 02:47:00,"Geographe Bay","Geographe Bay","Fished",33.1,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","55",-33.5709,115.2801,2014-12-12 01:05:00,"Geographe Bay","Geographe Bay","Fished",22.2,"Yes","No","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","56",-33.4953,115.2224,2014-12-09 01:49:00,"Geographe Bay","Geographe Bay","Fished",32,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","58",-33.5697,115.3796,2014-12-12 05:02:00,"Geographe Bay","Geographe Bay","No-take",13.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","60",-33.3626,115.5049,2014-12-11 01:55:00,"Geographe Bay","Geographe Bay","Fished",21.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","61",-33.4993,115.1345,2014-12-09 04:50:00,"Geographe Bay","Geographe Bay","Fished",34.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","62",-33.4505,115.3307,2014-12-10 22:24:00,"Geographe Bay","Geographe Bay","Fished",29.3,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","63",-33.5039,115.2562,2014-12-08 22:29:00,"Geographe Bay","Geographe Bay","Fished",30,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","64",-33.4364,115.5095,2014-12-11 04:54:00,"Geographe Bay","Geographe Bay","Fished",14.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","65",-33.3597,115.2048,2014-12-10 05:15:00,"Geographe Bay","Geographe Bay","Fished",39.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","67",-33.4783,115.0859,2014-12-13 02:10:00,"Geographe Bay","Geographe Bay","Fished",21.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","68",-33.3882,115.2426,2014-12-10 06:07:00,"Geographe Bay","Geographe Bay","Fished",38.9,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","69",-33.3534,115.404,2014-12-11 01:23:00,"Geographe Bay","Geographe Bay","Fished",28.7,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","70",-33.4159,115.1514,2014-12-10 02:46:00,"Geographe Bay","Geographe Bay","Fished",41,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","71",-33.4271,115.4287,2014-12-13 02:58:00,"Geographe Bay","Geographe Bay","Fished",24.4,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","72",-33.4625,115.3224,2014-12-10 22:07:00,"Geographe Bay","Geographe Bay","Fished",29.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","73",-33.3718,115.1456,2014-12-10 02:10:00,"Geographe Bay","Geographe Bay","Fished",41.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","75",-33.5893,115.2946,2014-12-12 00:52:00,"Geographe Bay","Geographe Bay","Fished",16.6,"Yes","No","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","76",-33.413,115.2847,2014-12-10 23:01:00,"Geographe Bay","Geographe Bay","Fished",35.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","77",-33.4558,115.1029,2014-12-09 05:50:00,"Geographe Bay","Geographe Bay","Fished",40.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","78",-33.5076,115.4438,2014-12-12 22:18:00,"Geographe Bay","Geographe Bay","Fished",13.4,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","79",-33.5874,115.2309,2014-12-12 00:16:00,"Geographe Bay","Geographe Bay","Fished",18.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","81",-33.3788,115.2305,2014-12-10 06:18:00,"Geographe Bay","Geographe Bay","Fished",38.9,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","82",-33.3955,115.1103,2014-12-09 23:49:00,"Geographe Bay","Geographe Bay","Fished",42.6,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","83",-33.4694,115.3791,2014-12-13 02:26:00,"Geographe Bay","Geographe Bay","Fished",24.6,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","84",-33.3965,115.1924,2014-12-10 03:28:00,"Geographe Bay","Geographe Bay","Fished",41,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","86",-33.5405,115.1785,2014-12-08 23:24:00,"Geographe Bay","Geographe Bay","Fished",28.6,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","87",-33.4896,115.4589,2014-12-12 23:49:00,"Geographe Bay","Geographe Bay","Fished",13,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","88",-33.5011,115.2145,2014-12-09 01:45:00,"Geographe Bay","Geographe Bay","Fished",31.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","89",-33.3828,115.0564,2014-12-09 22:58:00,"Geographe Bay","Geographe Bay","Fished",43.9,"Yes","Yes","Molly","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","90",-33.5333,115.3225,2014-12-12 02:53:00,"Geographe Bay","Geographe Bay","Fished",22,"Yes","No","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","91",-33.5396,115.2061,2014-12-08 22:54:00,"Geographe Bay","Geographe Bay","Fished",29.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","92",-33.4176,115.315,2014-12-10 22:43:00,"Geographe Bay","Geographe Bay","Fished",33,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","93",-33.4813,115.1528,2014-12-09 04:59:00,"Geographe Bay","Geographe Bay","Fished",36,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","95",-33.5175,115.3155,2014-12-12 02:42:00,"Geographe Bay","Geographe Bay","Fished",24.9,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","96",-33.4489,115.4808,2014-12-11 05:04:00,"Geographe Bay","Geographe Bay","Fished",15.9,"Yes","No","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","97",-33.3847,115.2927,2014-12-11 00:43:00,"Geographe Bay","Geographe Bay","Fished",35.6,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","98",-33.434,115.1727,2014-12-10 02:56:00,"Geographe Bay","Geographe Bay","Fished",38,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","100",-33.4325,115.2142,2014-12-10 03:14:00,"Geographe Bay","Geographe Bay","Fished",36.7,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","102",-33.5185,115.1196,2014-12-09 04:39:00,"Geographe Bay","Geographe Bay","Fished",34.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","103",-33.4581,115.4547,2014-12-11 05:12:00,"Geographe Bay","Geographe Bay","Fished",18.4,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","104",-33.4597,115.2451,2014-12-09 02:04:00,"Geographe Bay","Geographe Bay","Fished",33.3,"Yes","No","Molly","N/A"
-"2014-12_Geographe.Bay_stereoBRUVs","107",-33.5833,115.1881,2014-12-09 01:25:00,"Geographe Bay","Geographe Bay","Fished",29.3,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","108",-33.4691,115.1677,2014-12-10 22:47:00,"Geographe Bay","Geographe Bay","Fished",34,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","111",-33.5369,115.3219,2014-12-12 02:55:00,"Geographe Bay","Geographe Bay","Fished",21.9,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","112",-33.4052,115.5224,2014-12-11 04:35:00,"Geographe Bay","Geographe Bay","Fished",14.8,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","113",-33.3658,115.2779,2014-12-10 05:45:00,"Geographe Bay","Geographe Bay","Fished",36.6,"Yes","Yes","Curtin","Curtin"
-"2014-12_Geographe.Bay_stereoBRUVs","114",-33.3984,115.1639,2014-12-10 02:20:00,"Geographe Bay","Geographe Bay","Fished",39.7,"Yes","No","Curtin","N/A"
-"2014-12_Geographe.Bay_stereoBRUVs","115",-33.4446,115.4065,2014-12-13 02:46:00,"Geographe Bay","Geographe Bay","Fished",25.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","116",-33.4982,115.2864,2014-12-08 22:20:00,"Geographe Bay","Geographe Bay","Fished",29.7,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","119",-33.4388,115.5567,2014-12-14 03:25:00,"Geographe Bay","Geographe Bay","Fished",5.2,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","122",-33.5375,115.4021,2014-12-12 21:48:00,"Geographe Bay","Geographe Bay","Fished",13.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","135",-33.5019,115.4207,2014-12-16 04:54:00,"Geographe Bay","Geographe Bay","Fished",15.8,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","138",-33.5808,115.1139,2014-12-14 22:50:00,"Geographe Bay","Geographe Bay","Fished",15,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","139",-33.6033,115.2737,2014-12-17 00:29:00,"Geographe Bay","Geographe Bay","Fished",13.4,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","143",-33.5762,115.2367,2014-12-15 05:24:00,"Geographe Bay","Geographe Bay","Fished",23.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","144",-33.5342,115.4323,2014-12-16 07:37:00,"Geographe Bay","Geographe Bay","Fished",12.3,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","151",-33.4768,115.4329,2014-12-16 01:12:00,"Geographe Bay","Geographe Bay","Fished",17.2,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","154",-33.6034,115.1968,2014-12-15 02:58:00,"Geographe Bay","Geographe Bay","Fished",13.6,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","160",-33.6034,115.2478,2014-12-16 07:24:00,"Geographe Bay","Geographe Bay","Fished",0,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","167",-33.4627,115.4806,2014-12-16 01:25:00,"Geographe Bay","Geographe Bay","Fished",14.4,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","170",-33.5417,115.3698,2014-12-16 05:39:00,"Geographe Bay","Geographe Bay","No-take",15.8,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","175",-33.5518,115.1228,2014-12-14 22:34:00,"Geographe Bay","Geographe Bay","Fished",28.5,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","183",-33.5688,115.2488,2014-12-15 05:29:00,"Geographe Bay","Geographe Bay","Fished",22.6,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","192",-33.4273,115.5756,2014-12-14 03:19:00,"Geographe Bay","Geographe Bay","Fished",4.9,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","196",-33.5098,115.4045,2014-12-16 04:49:00,"Geographe Bay","Geographe Bay","Fished",15.9,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","199",-33.5975,115.2109,2014-12-15 02:53:00,"Geographe Bay","Geographe Bay","Fished",15.2,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","202",-33.5779,115.4117,2014-12-16 22:04:00,"Geographe Bay","Geographe Bay","No-take",9.8,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","207",-33.5738,115.2317,2014-12-12 00:06:00,"Geographe Bay","Geographe Bay","Fished",23.3,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","208",-33.3873,115.5742,2014-12-14 03:03:00,"Geographe Bay","Geographe Bay","Fished",7.2,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","215",-33.6066,115.2241,2014-12-15 02:45:00,"Geographe Bay","Geographe Bay","Fished",14.1,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","218",-33.5955,115.3031,2014-12-17 01:46:00,"Geographe Bay","Geographe Bay","Fished",14.7,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","224",-33.4189,115.5036,2014-12-15 22:59:00,"Geographe Bay","Geographe Bay","Fished",16.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","234",-33.6032,115.3602,2014-12-17 02:03:00,"Geographe Bay","Geographe Bay","Fished",9.3,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","236",-33.4949,115.4767,2014-12-16 02:45:00,"Geographe Bay","Geographe Bay","Fished",13.1,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","240",-33.4388,115.4685,2014-12-16 00:56:00,"Geographe Bay","Geographe Bay","Fished",18.9,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","247",-33.5561,115.1345,2014-12-14 22:30:00,"Geographe Bay","Geographe Bay","Fished",26.4,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","250",-33.5628,115.4224,2014-12-16 07:17:00,"Geographe Bay","Geographe Bay","No-take",10,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","256",-33.4083,115.4775,2014-12-14 05:12:00,"Geographe Bay","Geographe Bay","Fished",11.1,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","267",-33.5707,115.1362,2014-12-14 22:22:00,"Geographe Bay","Geographe Bay","Fished",23.2,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","270",-33.5205,115.4206,2014-12-12 22:00:00,"Geographe Bay","Geographe Bay","Fished",13.7,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","271",-33.5937,115.2133,2014-12-11 22:06:00,"Geographe Bay","Geographe Bay","Fished",27.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","272",-33.3815,115.4879,2014-12-14 00:37:00,"Geographe Bay","Geographe Bay","Fished",11.7,"Yes","Yes","Logan (ends 54:39)","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","282",-33.5572,115.3322,2014-12-17 00:02:00,"Geographe Bay","Geographe Bay","Fished",18.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","279",-33.5012,115.4379,2014-12-16 03:32:00,"Geographe Bay","Geographe Bay","Fished",14.2,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","287",-33.594,115.2189,2014-12-15 02:50:00,"Geographe Bay","Geographe Bay","Fished",16.4,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","288",-33.471,115.4776,2014-12-16 01:29:00,"Geographe Bay","Geographe Bay","Fished",14.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","295",-33.5555,115.4661,2014-12-16 07:50:00,"Geographe Bay","Geographe Bay","Fished",2.5,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","298",-33.5825,115.1301,2014-12-14 22:56:00,"Geographe Bay","Geographe Bay","Fished",18.1,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","304",-33.5958,115.1454,2014-12-15 02:17:00,"Geographe Bay","Geographe Bay","Fished",13.7,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","314",-33.5869,115.1628,2014-12-15 01:03:00,"Geographe Bay","Geographe Bay","Fished",20,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","327",-33.4892,115.3942,2014-12-14 06:10:00,"Geographe Bay","Geographe Bay","Fished",11.8,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","330",-33.5691,115.104,2014-12-14 22:44:00,"Geographe Bay","Geographe Bay","No-take",17.7,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","331",-33.6031,115.253,2014-12-15 05:46:00,"Geographe Bay","Geographe Bay","Fished",14.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","335",-33.5771,115.2267,2014-12-12 00:09:00,"Geographe Bay","Geographe Bay","Fished",21.6,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","346",-33.6092,115.2393,2014-12-15 05:08:00,"Geographe Bay","Geographe Bay","Fished",14,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","352",-33.4518,115.488,2014-12-16 00:45:00,"Geographe Bay","Geographe Bay","Fished",15.2,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","362",-33.627,115.2948,2014-12-17 02:23:00,"Geographe Bay","Geographe Bay","Fished",9.4,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","368",-33.5725,115.4513,2014-12-16 07:59:00,"Geographe Bay","Geographe Bay","Fished",3.7,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","375",-33.5902,115.2206,2014-12-11 22:14:00,"Geographe Bay","Geographe Bay","Fished",26.9,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","378",-33.5556,115.3912,2014-12-12 05:08:00,"Geographe Bay","Geographe Bay","No-take",13.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","384",-33.4275,115.5142,2014-12-15 22:54:00,"Geographe Bay","Geographe Bay","Fished",13.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","391",-33.5017,115.4101,2014-12-13 00:23:00,"Geographe Bay","Geographe Bay","Fished",17,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","394",-33.5181,115.382,2014-12-16 05:18:00,"Geographe Bay","Geographe Bay","Fished",19,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","395",-33.6073,115.3444,2014-12-17 02:08:00,"Geographe Bay","Geographe Bay","Fished",9.2,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","399",-33.6143,115.313,2014-12-17 02:17:00,"Geographe Bay","Geographe Bay","Fished",10.8,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","400",-33.3576,115.5517,2014-12-14 00:58:00,"Geographe Bay","Geographe Bay","Fished",9.8,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","407",-33.4882,115.4275,2014-12-13 00:13:00,"Geographe Bay","Geographe Bay","Fished",16.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","416",-33.6148,115.2806,2014-12-17 02:34:00,"Geographe Bay","Geographe Bay","Fished",12.3,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","428",-33.4505,115.5572,2014-12-15 22:31:00,"Geographe Bay","Geographe Bay","Fished",7.6,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","439",-33.6309,115.2731,2014-12-17 02:29:00,"Geographe Bay","Geographe Bay","Fished",8.4,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","442",-33.5066,115.4194,2014-12-12 05:28:00,"Geographe Bay","Geographe Bay","Fished",14.3,"Yes","Yes","Curtin","Curtin"
-"2014-12_Geographe.Bay_stereoBRUVs","443",-33.5698,115.2025,2014-12-11 22:34:00,"Geographe Bay","Geographe Bay","Fished",27,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","448",-33.3965,115.4931,2014-12-14 05:05:00,"Geographe Bay","Geographe Bay","Fished",10.6,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","451",-33.4198,115.5529,2014-12-14 03:32:00,"Geographe Bay","Geographe Bay","Fished",7.8,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","455",-33.5671,115.182,2014-12-15 00:42:00,"Geographe Bay","Geographe Bay","Fished",24.9,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","458",-33.5151,115.5044,2014-12-16 02:58:00,"Geographe Bay","Geographe Bay","Fished",6.2,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","463",-33.5151,115.5044,2014-12-12 00:03:00,"Geographe Bay","Geographe Bay","Fished",24.3,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","474",-33.4681,115.5436,2014-12-15 22:23:00,"Geographe Bay","Geographe Bay","Fished",6.8,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","480",-33.3476,115.5777,2014-12-14 01:06:00,"Geographe Bay","Geographe Bay","Fished",7.4,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","490",-33.5613,115.3612,2014-12-16 22:20:00,"Geographe Bay","Geographe Bay","Fished",13.4,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","492",-33.4638,115.4975,2014-12-16 00:40:00,"Geographe Bay","Geographe Bay","Fished",14.7,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","496",-33.4851,115.4752,2014-12-16 02:42:00,"Geographe Bay","Geographe Bay","Fished",15.3,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","499",-33.4517,115.5441,2014-12-15 22:36:00,"Geographe Bay","Geographe Bay","Fished",9.9,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","503",-33.5845,115.3098,2014-12-16 23:48:00,"Geographe Bay","Geographe Bay","Fished",16.3,"Yes","Yes","Daphne (finishes at 55:48)","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","506",-33.5174,115.4165,2014-12-16 03:23:00,"Geographe Bay","Geographe Bay","Fished",14.1,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","512",-33.5094,115.4873,2014-12-16 03:03:00,"Geographe Bay","Geographe Bay","Fished",10.6,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","523",-33.5634,115.1589,2014-12-15 00:35:00,"Geographe Bay","Geographe Bay","Fished",26,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","527",-33.5894,115.2078,2014-12-11 22:16:00,"Geographe Bay","Geographe Bay","Fished",26.8,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","528",-33.4811,115.4971,2014-12-16 00:34:00,"Geographe Bay","Geographe Bay","Fished",14,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","538",-33.5839,115.3847,2014-12-16 21:53:00,"Geographe Bay","Geographe Bay","Fished",11.6,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","544",-33.4464,115.4341,2014-12-14 05:36:00,"Geographe Bay","Geographe Bay","Fished",12.3,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","551",-33.5735,115.3901,2014-12-16 21:58:00,"Geographe Bay","Geographe Bay","No-take",11.7,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","554",-33.5577,115.3835,2014-12-16 22:13:00,"Geographe Bay","Geographe Bay","No-take",12.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","560",-33.4382,115.5269,2014-12-15 22:49:00,"Geographe Bay","Geographe Bay","Fished",14.6,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","567",-33.5867,115.276,2014-12-17 00:23:00,"Geographe Bay","Geographe Bay","Fished",17.4,"Yes","No","Curtin","N/A"
-"2014-12_Geographe.Bay_stereoBRUVs","572",-33.3913,115.5492,2014-12-14 02:54:00,"Geographe Bay","Geographe Bay","Fished",8.1,"Yes","No","Unknown",NA
-"2014-12_Geographe.Bay_stereoBRUVs","579",-33.5017,115.3741,2014-12-16 05:10:00,"Geographe Bay","Geographe Bay","Fished",22,"Yes","No","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","583",-33.4784,115.3932,2014-12-14 05:55:00,"Geographe Bay","Geographe Bay","Fished",12,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","587",-33.5935,115.1874,2014-12-15 03:03:00,"Geographe Bay","Geographe Bay","Fished",16.6,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","586",-33.5309,115.386,2014-12-16 05:24:00,"Geographe Bay","Geographe Bay","No-take",15.8,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","592",-33.5185,115.446,2014-12-16 03:15:00,"Geographe Bay","Geographe Bay","Fished",12.3,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","599",-33.5021,115.4508,2014-12-12 22:22:00,"Geographe Bay","Geographe Bay","Fished",13.9,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","602",-33.6202,115.2562,2014-12-15 04:57:00,"Geographe Bay","Geographe Bay","Fished",11.2,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","608",-33.4552,115.4703,2014-12-16 01:01:00,"Geographe Bay","Geographe Bay","Fished",16.7,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","611",-33.5421,115.459,2014-12-16 07:45:00,"Geographe Bay","Geographe Bay","Fished",8.2,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","615",-33.5981,115.3328,2014-12-17 01:56:00,"Geographe Bay","Geographe Bay","Fished",11.8,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","623",-33.6129,115.1556,2014-12-15 02:24:00,"Geographe Bay","Geographe Bay","Fished",7.8,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","618",-33.5679,115.3528,2014-12-16 21:40:00,"Geographe Bay","Geographe Bay","Fished",14.5,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","624",-33.421,115.4919,2014-12-15 23:03:00,"Geographe Bay","Geographe Bay","Fished",17.5,"Yes","No","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","633",-33.4712,115.4535,2014-12-16 01:18:00,"Geographe Bay","Geographe Bay","Fished",16.2,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","634",-33.5337,115.4141,2014-12-16 07:30:00,"Geographe Bay","Geographe Bay","Fished",13,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","640",-33.5162,115.4646,2014-12-16 03:10:00,"Geographe Bay","Geographe Bay","Fished",11.5,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","647",-33.4926,115.4247,2014-12-13 00:17:00,"Geographe Bay","Geographe Bay","Fished",15.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","650",-33.5131,115.3716,2014-12-16 05:14:00,"Geographe Bay","Geographe Bay","Fished",21.1,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","666",-33.5511,115.3572,2014-12-16 22:25:00,"Geographe Bay","Geographe Bay","No-take",15.6,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","656",-33.3713,115.5504,2014-12-14 01:28:00,"Geographe Bay","Geographe Bay","Fished",9,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","672",-33.4004,115.5357,2014-12-14 03:45:00,"Geographe Bay","Geographe Bay","Fished",8.4,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","682",-33.5696,115.3354,2014-12-16 23:57:00,"Geographe Bay","Geographe Bay","Fished",15.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","684",-33.5845,115.1735,2014-12-15 01:00:00,"Geographe Bay","Geographe Bay","Fished",20.6,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","688",-33.6026,115.3181,2014-12-17 01:52:00,"Geographe Bay","Geographe Bay","Fished",12.8,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","694",-33.5281,115.3499,2014-12-16 05:32:00,"Geographe Bay","Geographe Bay","Fished",21.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","698",-33.5246,115.4035,2014-12-12 05:25:00,"Geographe Bay","Geographe Bay","Fished",14,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","704",-33.4848,115.5324,2014-12-15 22:15:00,"Geographe Bay","Geographe Bay","Fished",7.45,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","711",-33.3695,115.5666,2014-12-14 01:24:00,"Geographe Bay","Geographe Bay","Fished",8.4,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","714",-33.5793,115.1468,2014-12-15 00:26:00,"Geographe Bay","Geographe Bay","Fished",21.1,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","719",-33.601,115.2325,2014-12-11 21:59:00,"Geographe Bay","Geographe Bay","Fished",26.3,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","720",-33.3599,115.5835,2014-12-14 01:11:00,"Geographe Bay","Geographe Bay","Fished",8.2,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","735",-33.562,115.1433,2014-12-14 22:27:00,"Geographe Bay","Geographe Bay","Fished",26.7,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","736",-33.3851,115.5606,2014-12-14 02:59:00,"Geographe Bay","Geographe Bay","Fished",8.2,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","746",-33.5794,115.3571,2014-12-16 21:45:00,"Geographe Bay","Geographe Bay","Fished",13.2,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","748",-33.3696,115.5138,2014-12-14 00:46:00,"Geographe Bay","Geographe Bay","Fished",11.1,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","752",-33.3766,115.5914,2014-12-14 01:15:00,"Geographe Bay","Geographe Bay","Fished",6.2,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","764",-33.3744,115.4961,2014-12-14 00:43:00,"Geographe Bay","Geographe Bay","Fished",11.6,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","762",-33.5199,115.4149,2014-12-12 05:44:00,"Geographe Bay","Geographe Bay","Fished",13,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","782",-33.5142,115.4368,2014-12-12 22:06:00,"Geographe Bay","Geographe Bay","Fished",13.7,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","779",-33.5817,115.2264,2014-12-17 00:11:00,"Geographe Bay","Geographe Bay","Fished",19,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","783",-33.5817,115.2264,2014-12-12 00:12:00,"Geographe Bay","Geographe Bay","Fished",21.5,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","784",-33.6014,115.1774,2014-12-15 03:07:00,"Geographe Bay","Geographe Bay","Fished",13.4,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","791",-33.4851,115.4435,2014-12-13 00:03:00,"Geographe Bay","Geographe Bay","Fished",15,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","794",-33.6248,115.2039,2014-12-15 02:38:00,"Geographe Bay","Geographe Bay","No-take",7.4,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","800",-33.5732,115.1935,2014-12-15 00:48:00,"Geographe Bay","Geographe Bay","Fished",22.9,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","807",-33.494,115.4907,2014-12-16 02:50:00,"Geographe Bay","Geographe Bay","Fished",14,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","810",-33.5513,115.3766,2014-12-16 05:44:00,"Geographe Bay","Geographe Bay","No-take",14.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","816",-33.3996,115.5633,2014-12-14 03:09:00,"Geographe Bay","Geographe Bay","Fished",7.9,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","823",-33.5857,115.2872,2014-12-17 00:19:00,"Geographe Bay","Geographe Bay","Fished",16.2,"Yes","No","Curtin","Curtin"
-"2014-12_Geographe.Bay_stereoBRUVs","826",-33.5427,115.4006,2014-12-12 21:45:00,"Geographe Bay","Geographe Bay","No-take",12.8,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","828",-33.4175,115.5296,2014-12-14 03:38:00,"Geographe Bay","Geographe Bay","Fished",7.6,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","832",-33.4556,115.5197,2014-12-15 22:43:00,"Geographe Bay","Geographe Bay","Fished",12.6,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","839",-33.4873,115.4085,2014-12-16 05:00:00,"Geographe Bay","Geographe Bay","Fished",20,"Yes","No","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","842",-33.5681,115.1149,2014-12-14 22:40:00,"Geographe Bay","Geographe Bay","Fished",22.3,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","843",-33.6,115.2586,2014-12-15 05:43:00,"Geographe Bay","Geographe Bay","Fished",14.6,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","848",-33.3519,115.5323,2014-12-14 00:53:00,"Geographe Bay","Geographe Bay","Fished",10.4,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","855",-33.4901,115.4358,2014-12-13 00:09:00,"Geographe Bay","Geographe Bay","Fished",15.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","858",-33.5573,115.3462,2014-12-16 22:29:00,"Geographe Bay","Geographe Bay","Fished",16.6,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","864",-33.5833,115.3721,2014-12-16 21:50:00,"Geographe Bay","Geographe Bay","Fished",12.4,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","879",-33.6169,115.1829,2014-12-15 02:31:00,"Geographe Bay","Geographe Bay","Fished",8.1,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","880",-33.5366,115.4444,2014-12-16 07:41:00,"Geographe Bay","Geographe Bay","Fished",10.9,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","1038",-33.5333,115.42,2014-12-16 07:33:00,"Geographe Bay","Geographe Bay","Fished",13.9,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","1108",-33.558,115.4144,2014-12-16 07:20:00,"Geographe Bay","Geographe Bay","No-take",11.9,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","10001",-33.4217,115.3722,2014-12-13 22:17:00,"Geographe Bay","Geographe Bay","Fished",15.9,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","10003",-33.4213,115.3594,2014-12-13 22:23:00,"Geographe Bay","Geographe Bay","Fished",16.5,"Yes","No","Molly",NA
-"2014-12_Geographe.Bay_stereoBRUVs","10005",-33.4778,115.3694,2014-12-14 06:03:00,"Geographe Bay","Geographe Bay","Fished",13.7,"Yes","Yes","Curtin","Curtin"
-"2014-12_Geographe.Bay_stereoBRUVs","11R2",-33.3967,115.5076,2014-12-11 04:26:00,"Geographe Bay","Geographe Bay","Fished",18.6,"Yes","Yes","Brooke","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","11R3",-33.4122,115.5205,2014-12-11 04:40:00,"Geographe Bay","Geographe Bay","Fished",14.7,"Yes","Yes","Brooke","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","11R4",-33.4197,115.5176,2014-12-11 04:48:00,"Geographe Bay","Geographe Bay","Fished",14.5,"Yes","Yes","Brooke","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC1",-33.5932,115.2133,2014-12-11 22:09:00,"Geographe Bay","Geographe Bay","Fished",26.5,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC2",-33.5916,115.2379,2014-12-12 00:23:00,"Geographe Bay","Geographe Bay","Fished",17.6,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC3",-33.5915,115.2415,2014-12-12 00:32:00,"Geographe Bay","Geographe Bay","Fished",17.9,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC5",-33.5621,115.3443,2014-12-12 03:16:00,"Geographe Bay","Geographe Bay","Fished",14.2,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC6",-33.5711,115.3481,2014-12-12 03:22:00,"Geographe Bay","Geographe Bay","Fished",14.7,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC7",-33.5118,115.4179,2014-12-12 05:38:00,"Geographe Bay","Geographe Bay","Fished",15.2,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC8",-33.5149,115.4182,2014-12-12 05:41:00,"Geographe Bay","Geographe Bay","Fished",14.1,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","12RC9",-33.5162,115.4064,2014-12-12 05:48:00,"Geographe Bay","Geographe Bay","Fished",14.5,"Yes","Yes","Molly","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC1",-33.506,115.4308,2014-12-12 22:11:00,"Geographe Bay","Geographe Bay","Fished",13.8,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC11",-33.374,115.3693,2014-12-13 05:23:00,"Geographe Bay","Geographe Bay","Fished",31,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC12",-33.3744,115.3668,2014-12-13 05:25:00,"Geographe Bay","Geographe Bay","Fished",31.3,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC13",-33.3755,115.3631,2014-12-13 05:31:00,"Geographe Bay","Geographe Bay","Fished",31.1,"Yes","Yes","Curtin","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC15",-33.3768,115.3559,2014-12-13 05:39:00,"Geographe Bay","Geographe Bay","Fished",32.5,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC4",-33.4994,115.3965,2014-12-13 00:30:00,"Geographe Bay","Geographe Bay","Fished",19.5,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC5",-33.4839,115.4656,2014-12-13 02:05:00,"Geographe Bay","Geographe Bay","Fished",26.8,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC6",-33.381,115.3892,2014-12-13 05:07:00,"Geographe Bay","Geographe Bay","Fished",29.7,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC7",-33.3774,115.3861,2014-12-13 05:10:00,"Geographe Bay","Geographe Bay","Fished",29.5,"Yes","Yes","Daphne","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC8",-33.3726,115.3791,2014-12-13 05:14:00,"Geographe Bay","Geographe Bay","Fished",30.4,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","13RC9",-33.3731,115.3748,2014-12-13 05:18:00,"Geographe Bay","Geographe Bay","Fished",30.9,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR-BOB",-33.5924,115.2206,2014-12-17 04:23:00,"Geographe Bay","Geographe Bay","Fished",16.7,"Yes","Yes","Curtin","Curtin"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR1-1",-33.5936,115.1963,2014-12-17 04:02:00,"Geographe Bay","Geographe Bay","Fished",17.3,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR1-2",-33.5936,115.1995,2014-12-17 04:05:00,"Geographe Bay","Geographe Bay","Fished",16,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR1-3",-33.5938,115.2023,2014-12-17 04:07:00,"Geographe Bay","Geographe Bay","Fished",15.8,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR1-4",-33.5935,115.2055,2014-12-17 04:09:00,"Geographe Bay","Geographe Bay","Fished",16.8,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR2-1",-33.5938,115.1907,2014-12-17 05:40:00,"Geographe Bay","Geographe Bay","Fished",17.7,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR2-2",-33.594,115.1884,2014-12-17 05:42:00,"Geographe Bay","Geographe Bay","Fished",16.2,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR2-3",-33.5941,115.1865,2014-12-17 05:44:00,"Geographe Bay","Geographe Bay","Fished",16.4,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR2-4",-33.5937,115.193,2014-12-17 05:38:00,"Geographe Bay","Geographe Bay","Fished",16.2,"Yes","No","Curtin",NA
-"2014-12_Geographe.Bay_stereoBRUVs","GBR3-1",-33.5945,115.1819,2014-12-17 05:53:00,"Geographe Bay","Geographe Bay","Fished",17.6,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR3-2",-33.5937,115.193,2014-12-17 05:30:00,"Geographe Bay","Geographe Bay","Fished",17.9,"Yes","No","Unknown",NA
-"2014-12_Geographe.Bay_stereoBRUVs","GBR3-3",-33.5937,115.184,2014-12-17 05:47:00,"Geographe Bay","Geographe Bay","Fished",17,"Yes","Yes","Curtin","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR3-4",-33.5939,115.1851,2014-12-17 05:46:00,"Geographe Bay","Geographe Bay","Fished",16.6,"Yes","Yes","Unknown","Unknown"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR4-1",-33.5933,115.2081,2014-12-17 04:11:00,"Geographe Bay","Geographe Bay","Fished",16.1,"Yes","Yes","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR4-2",-33.5928,115.2102,2014-12-17 04:13:00,"Geographe Bay","Geographe Bay","Fished",16.3,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR5-1",-33.5932,115.2119,2014-12-17 04:15:00,"Geographe Bay","Geographe Bay","Fished",16.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR5-2",-33.5927,115.2148,2014-12-17 04:17:00,"Geographe Bay","Geographe Bay","Fished",16.6,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","GBR5-3",-33.5924,115.2175,2014-12-17 04:19:00,"Geographe Bay","Geographe Bay","Fished",16.4,"Yes","No","Logan","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","RB1",-33.5346,115.2177,2014-12-08 22:49:00,"Geographe Bay","Geographe Bay","Fished",28,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","RB2",-33.5086,115.2255,2014-12-09 01:39:00,"Geographe Bay","Geographe Bay","Fished",30,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","RC1",-33.4628,115.24,2014-12-09 02:09:00,"Geographe Bay","Geographe Bay","Fished",34.2,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","RC2",-33.4864,115.178,2014-12-09 02:34:00,"Geographe Bay","Geographe Bay","Fished",34.3,"Yes","Yes","Hayley","Molly"
-"2014-12_Geographe.Bay_stereoBRUVs","RC3",-33.4705,115.1684,2014-12-09 05:11:00,"Geographe Bay","Geographe Bay","Fished",35,"Yes","Yes","Hayley","Molly"
+campaignid,sample,latitude,longitude,date.time,site,location,status,depth,successful.count,successful.length,observer.count,observer.length
+2014-12_Geographe.Bay_stereoBRUVs,1,-33.3635,115.2142,2014-12-10T13:20:00+08:00,Geographe Bay,Geographe Bay,Fished,40,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,2,-33.4405,115.101,2014-12-10T06:29:00+08:00,Geographe Bay,Geographe Bay,Fished,40.5,Yes,Yes,Test video,Molly
+2014-12_Geographe.Bay_stereoBRUVs,3,-33.4921,115.3549,2014-12-13T08:41:00+08:00,Geographe Bay,Geographe Bay,Fished,24.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,4,-33.3921,115.2281,2014-12-10T14:13:00+08:00,Geographe Bay,Geographe Bay,Fished,38.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,5,-33.3628,115.455,2014-12-11T09:43:00+08:00,Geographe Bay,Geographe Bay,Fished,25.7,Yes,Yes,test video,Molly
+2014-12_Geographe.Bay_stereoBRUVs,6,-33.4071,115.1204,2014-12-10T07:55:00+08:00,Geographe Bay,Geographe Bay,Fished,41.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,7,-33.4205,115.4457,2014-12-13T11:04:00+08:00,Geographe Bay,Geographe Bay,Fished,23.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,9,-33.3643,115.1361,2014-12-10T10:04:00+08:00,Geographe Bay,Geographe Bay,Fished,41.8,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,10,-33.5282,115.3313,2014-12-12T10:48:00+08:00,Geographe Bay,Geographe Bay,Fished,22.7,Yes,No,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,11,-33.5712,115.2958,2014-12-12T08:59:00+08:00,Geographe Bay,Geographe Bay,Fished,21.7,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12,-33.404,115.2616,2014-12-10T14:00:00+08:00,Geographe Bay,Geographe Bay,Fished,38.7,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13,-33.4502,115.0925,2014-12-09T13:41:00+08:00,Geographe Bay,Geographe Bay,Fished,42.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,14,-33.5297,115.413,2014-12-13T05:56:00+08:00,Geographe Bay,Geographe Bay,Fished,13.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,15,-33.5782,115.2148,2014-12-12T06:27:00+08:00,Geographe Bay,Geographe Bay,Fished,26.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,16,-33.3889,115.4986,2014-12-11T12:21:00+08:00,Geographe Bay,Geographe Bay,Fished,20,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,17,-33.3636,115.2327,2014-12-10T13:27:00+08:00,Geographe Bay,Geographe Bay,Fished,38.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,18,-33.3926,115.0981,2014-12-10T07:44:00+08:00,Geographe Bay,Geographe Bay,Fished,42.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,19,-33.4605,115.3618,2014-12-13T10:33:00+08:00,Geographe Bay,Geographe Bay,Fished,26,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,20,-33.4339,115.2221,2014-12-10T11:09:00+08:00,Geographe Bay,Geographe Bay,Fished,36,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,22,-33.5746,115.1807,2014-12-09T07:10:00+08:00,Geographe Bay,Geographe Bay,Fished,22.6,Yes,Yes,test video,Molly
+2014-12_Geographe.Bay_stereoBRUVs,23,-33.5042,115.4289,2014-12-16T11:29:00+08:00,Geographe Bay,Geographe Bay,Fished,13.6,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,24,-33.4712,115.2862,2014-12-09T06:05:00+08:00,Geographe Bay,Geographe Bay,Fished,29.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,25,-33.3833,115.0828,2014-12-10T07:10:00+08:00,Geographe Bay,Geographe Bay,Fished,42.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,26,-33.55,115.3236,2014-12-12T11:02:00+08:00,Geographe Bay,Geographe Bay,Fished,20.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,27,-33.5464,115.1884,2014-12-09T07:00:00+08:00,Geographe Bay,Geographe Bay,Fished,28.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,28,-33.4272,115.2873,2014-12-11T07:07:00+08:00,Geographe Bay,Geographe Bay,Fished,34,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,29,-33.487,115.1764,2014-12-09T10:30:00+08:00,Geographe Bay,Geographe Bay,Fished,34.3,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,30,-33.4241,115.3341,2014-12-11T06:37:00+08:00,Geographe Bay,Geographe Bay,Fished,31.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,31,-33.5986,115.2369,2014-12-12T05:55:00+08:00,Geographe Bay,Geographe Bay,Fished,26.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,32,-33.4808,115.4621,2014-12-13T07:53:00+08:00,Geographe Bay,Geographe Bay,Fished,14.1,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,33,-33.3528,115.3205,2014-12-11T08:54:00+08:00,Geographe Bay,Geographe Bay,Fished,34.1,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,34,-33.3845,115.0739,2014-12-10T07:05:00+08:00,Geographe Bay,Geographe Bay,Fished,43,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,35,-33.4055,115.4157,2014-12-13T11:14:00+08:00,Geographe Bay,Geographe Bay,Fished,27.9,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,36,-33.4269,115.2077,2014-12-10T11:17:00+08:00,Geographe Bay,Geographe Bay,Fished,38.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,37,-33.3585,115.3721,2014-12-11T09:11:00+08:00,Geographe Bay,Geographe Bay,Fished,30.3,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,38,-33.5037,115.1274,2014-12-09T12:45:00+08:00,Geographe Bay,Geographe Bay,Fished,34.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,39,-33.465,115.4329,2014-12-11T13:20:00+08:00,Geographe Bay,Geographe Bay,Fished,19.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,40,-33.472,115.2287,2014-12-09T09:57:00+08:00,Geographe Bay,Geographe Bay,Fished,33.7,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,41,-33.3679,115.0986,2014-12-10T07:35:00+08:00,Geographe Bay,Geographe Bay,Fished,42.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,42,-33.5425,115.3862,2014-12-12T13:13:00+08:00,Geographe Bay,Geographe Bay,No-take,13,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,44,-33.3984,115.3097,2014-12-11T06:54:00+08:00,Geographe Bay,Geographe Bay,Fished,34.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,45,-33.4446,115.1317,2014-12-09T13:28:00+08:00,Geographe Bay,Geographe Bay,Fished,41.1,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,47,-33.5485,115.2878,2014-12-12T10:29:00+08:00,Geographe Bay,Geographe Bay,Fished,24.3,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,48,-33.4028,115.5134,2014-12-11T12:31:00+08:00,Geographe Bay,Geographe Bay,Fished,17.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,49,-33.3809,115.2721,2014-12-10T13:51:00+08:00,Geographe Bay,Geographe Bay,Fished,37.7,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,50,-33.4108,115.1742,2014-12-10T10:29:00+08:00,Geographe Bay,Geographe Bay,Fished,40.5,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,51,-33.4316,115.4137,2014-12-13T10:52:00+08:00,Geographe Bay,Geographe Bay,Fished,25.4,Yes,No,Unknown,NA
+2014-12_Geographe.Bay_stereoBRUVs,52,-33.4927,115.2982,2014-12-09T06:14:00+08:00,Geographe Bay,Geographe Bay,Fished,29.7,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,53,-33.3582,115.3565,2014-12-11T09:04:00+08:00,Geographe Bay,Geographe Bay,Fished,31.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,54,-33.5131,115.1532,2014-12-09T10:47:00+08:00,Geographe Bay,Geographe Bay,Fished,33.1,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,55,-33.5709,115.2801,2014-12-12T09:05:00+08:00,Geographe Bay,Geographe Bay,Fished,22.2,Yes,No,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,56,-33.4953,115.2224,2014-12-09T09:49:00+08:00,Geographe Bay,Geographe Bay,Fished,32,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,58,-33.5697,115.3796,2014-12-12T13:02:00+08:00,Geographe Bay,Geographe Bay,No-take,13.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,60,-33.3626,115.5049,2014-12-11T09:55:00+08:00,Geographe Bay,Geographe Bay,Fished,21.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,61,-33.4993,115.1345,2014-12-09T12:50:00+08:00,Geographe Bay,Geographe Bay,Fished,34.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,62,-33.4505,115.3307,2014-12-11T06:24:00+08:00,Geographe Bay,Geographe Bay,Fished,29.3,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,63,-33.5039,115.2562,2014-12-09T06:29:00+08:00,Geographe Bay,Geographe Bay,Fished,30,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,64,-33.4364,115.5095,2014-12-11T12:54:00+08:00,Geographe Bay,Geographe Bay,Fished,14.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,65,-33.3597,115.2048,2014-12-10T13:15:00+08:00,Geographe Bay,Geographe Bay,Fished,39.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,67,-33.4783,115.0859,2014-12-13T10:10:00+08:00,Geographe Bay,Geographe Bay,Fished,21.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,68,-33.3882,115.2426,2014-12-10T14:07:00+08:00,Geographe Bay,Geographe Bay,Fished,38.9,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,69,-33.3534,115.404,2014-12-11T09:23:00+08:00,Geographe Bay,Geographe Bay,Fished,28.7,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,70,-33.4159,115.1514,2014-12-10T10:46:00+08:00,Geographe Bay,Geographe Bay,Fished,41,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,71,-33.4271,115.4287,2014-12-13T10:58:00+08:00,Geographe Bay,Geographe Bay,Fished,24.4,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,72,-33.4625,115.3224,2014-12-11T06:07:00+08:00,Geographe Bay,Geographe Bay,Fished,29.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,73,-33.3718,115.1456,2014-12-10T10:10:00+08:00,Geographe Bay,Geographe Bay,Fished,41.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,75,-33.5893,115.2946,2014-12-12T08:52:00+08:00,Geographe Bay,Geographe Bay,Fished,16.6,Yes,No,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,76,-33.413,115.2847,2014-12-11T07:01:00+08:00,Geographe Bay,Geographe Bay,Fished,35.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,77,-33.4558,115.1029,2014-12-09T13:50:00+08:00,Geographe Bay,Geographe Bay,Fished,40.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,78,-33.5076,115.4438,2014-12-13T06:18:00+08:00,Geographe Bay,Geographe Bay,Fished,13.4,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,79,-33.5874,115.2309,2014-12-12T08:16:00+08:00,Geographe Bay,Geographe Bay,Fished,18.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,81,-33.3788,115.2305,2014-12-10T14:18:00+08:00,Geographe Bay,Geographe Bay,Fished,38.9,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,82,-33.3955,115.1103,2014-12-10T07:49:00+08:00,Geographe Bay,Geographe Bay,Fished,42.6,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,83,-33.4694,115.3791,2014-12-13T10:26:00+08:00,Geographe Bay,Geographe Bay,Fished,24.6,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,84,-33.3965,115.1924,2014-12-10T11:28:00+08:00,Geographe Bay,Geographe Bay,Fished,41,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,86,-33.5405,115.1785,2014-12-09T07:24:00+08:00,Geographe Bay,Geographe Bay,Fished,28.6,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,87,-33.4896,115.4589,2014-12-13T07:49:00+08:00,Geographe Bay,Geographe Bay,Fished,13,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,88,-33.5011,115.2145,2014-12-09T09:45:00+08:00,Geographe Bay,Geographe Bay,Fished,31.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,89,-33.3828,115.0564,2014-12-10T06:58:00+08:00,Geographe Bay,Geographe Bay,Fished,43.9,Yes,Yes,Molly,Molly
+2014-12_Geographe.Bay_stereoBRUVs,90,-33.5333,115.3225,2014-12-12T10:53:00+08:00,Geographe Bay,Geographe Bay,Fished,22,Yes,No,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,91,-33.5396,115.2061,2014-12-09T06:54:00+08:00,Geographe Bay,Geographe Bay,Fished,29.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,92,-33.4176,115.315,2014-12-11T06:43:00+08:00,Geographe Bay,Geographe Bay,Fished,33,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,93,-33.4813,115.1528,2014-12-09T12:59:00+08:00,Geographe Bay,Geographe Bay,Fished,36,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,95,-33.5175,115.3155,2014-12-12T10:42:00+08:00,Geographe Bay,Geographe Bay,Fished,24.9,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,96,-33.4489,115.4808,2014-12-11T13:04:00+08:00,Geographe Bay,Geographe Bay,Fished,15.9,Yes,No,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,97,-33.3847,115.2927,2014-12-11T08:43:00+08:00,Geographe Bay,Geographe Bay,Fished,35.6,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,98,-33.434,115.1727,2014-12-10T10:56:00+08:00,Geographe Bay,Geographe Bay,Fished,38,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,100,-33.4325,115.2142,2014-12-10T11:14:00+08:00,Geographe Bay,Geographe Bay,Fished,36.7,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,102,-33.5185,115.1196,2014-12-09T12:39:00+08:00,Geographe Bay,Geographe Bay,Fished,34.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,103,-33.4581,115.4547,2014-12-11T13:12:00+08:00,Geographe Bay,Geographe Bay,Fished,18.4,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,104,-33.4597,115.2451,2014-12-09T10:04:00+08:00,Geographe Bay,Geographe Bay,Fished,33.3,Yes,No,Molly,N/A
+2014-12_Geographe.Bay_stereoBRUVs,107,-33.5833,115.1881,2014-12-09T09:25:00+08:00,Geographe Bay,Geographe Bay,Fished,29.3,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,108,-33.4691,115.1677,2014-12-11T06:47:00+08:00,Geographe Bay,Geographe Bay,Fished,34,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,111,-33.5369,115.3219,2014-12-12T10:55:00+08:00,Geographe Bay,Geographe Bay,Fished,21.9,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,112,-33.4052,115.5224,2014-12-11T12:35:00+08:00,Geographe Bay,Geographe Bay,Fished,14.8,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,113,-33.3658,115.2779,2014-12-10T13:45:00+08:00,Geographe Bay,Geographe Bay,Fished,36.6,Yes,Yes,Curtin,Curtin
+2014-12_Geographe.Bay_stereoBRUVs,114,-33.3984,115.1639,2014-12-10T10:20:00+08:00,Geographe Bay,Geographe Bay,Fished,39.7,Yes,No,Curtin,N/A
+2014-12_Geographe.Bay_stereoBRUVs,115,-33.4446,115.4065,2014-12-13T10:46:00+08:00,Geographe Bay,Geographe Bay,Fished,25.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,116,-33.4982,115.2864,2014-12-09T06:20:00+08:00,Geographe Bay,Geographe Bay,Fished,29.7,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,119,-33.4388,115.5567,2014-12-14T11:25:00+08:00,Geographe Bay,Geographe Bay,Fished,5.2,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,122,-33.5375,115.4021,2014-12-13T05:48:00+08:00,Geographe Bay,Geographe Bay,Fished,13.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,135,-33.5019,115.4207,2014-12-16T12:54:00+08:00,Geographe Bay,Geographe Bay,Fished,15.8,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,138,-33.5808,115.1139,2014-12-15T06:50:00+08:00,Geographe Bay,Geographe Bay,Fished,15,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,139,-33.6033,115.2737,2014-12-17T08:29:00+08:00,Geographe Bay,Geographe Bay,Fished,13.4,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,143,-33.5762,115.2367,2014-12-15T13:24:00+08:00,Geographe Bay,Geographe Bay,Fished,23.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,144,-33.5342,115.4323,2014-12-16T15:37:00+08:00,Geographe Bay,Geographe Bay,Fished,12.3,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,151,-33.4768,115.4329,2014-12-16T09:12:00+08:00,Geographe Bay,Geographe Bay,Fished,17.2,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,154,-33.6034,115.1968,2014-12-15T10:58:00+08:00,Geographe Bay,Geographe Bay,Fished,13.6,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,160,-33.6034,115.2478,2014-12-16T15:24:00+08:00,Geographe Bay,Geographe Bay,Fished,0,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,167,-33.4627,115.4806,2014-12-16T09:25:00+08:00,Geographe Bay,Geographe Bay,Fished,14.4,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,170,-33.5417,115.3698,2014-12-16T13:39:00+08:00,Geographe Bay,Geographe Bay,No-take,15.8,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,175,-33.5518,115.1228,2014-12-15T06:34:00+08:00,Geographe Bay,Geographe Bay,Fished,28.5,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,183,-33.5688,115.2488,2014-12-15T13:29:00+08:00,Geographe Bay,Geographe Bay,Fished,22.6,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,192,-33.4273,115.5756,2014-12-14T11:19:00+08:00,Geographe Bay,Geographe Bay,Fished,4.9,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,196,-33.5098,115.4045,2014-12-16T12:49:00+08:00,Geographe Bay,Geographe Bay,Fished,15.9,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,199,-33.5975,115.2109,2014-12-15T10:53:00+08:00,Geographe Bay,Geographe Bay,Fished,15.2,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,202,-33.5779,115.4117,2014-12-17T06:04:00+08:00,Geographe Bay,Geographe Bay,No-take,9.8,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,207,-33.5738,115.2317,2014-12-12T08:06:00+08:00,Geographe Bay,Geographe Bay,Fished,23.3,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,208,-33.3873,115.5742,2014-12-14T11:03:00+08:00,Geographe Bay,Geographe Bay,Fished,7.2,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,215,-33.6066,115.2241,2014-12-15T10:45:00+08:00,Geographe Bay,Geographe Bay,Fished,14.1,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,218,-33.5955,115.3031,2014-12-17T09:46:00+08:00,Geographe Bay,Geographe Bay,Fished,14.7,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,224,-33.4189,115.5036,2014-12-16T06:59:00+08:00,Geographe Bay,Geographe Bay,Fished,16.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,234,-33.6032,115.3602,2014-12-17T10:03:00+08:00,Geographe Bay,Geographe Bay,Fished,9.3,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,236,-33.4949,115.4767,2014-12-16T10:45:00+08:00,Geographe Bay,Geographe Bay,Fished,13.1,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,240,-33.4388,115.4685,2014-12-16T08:56:00+08:00,Geographe Bay,Geographe Bay,Fished,18.9,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,247,-33.5561,115.1345,2014-12-15T06:30:00+08:00,Geographe Bay,Geographe Bay,Fished,26.4,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,250,-33.5628,115.4224,2014-12-16T15:17:00+08:00,Geographe Bay,Geographe Bay,No-take,10,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,256,-33.4083,115.4775,2014-12-14T13:12:00+08:00,Geographe Bay,Geographe Bay,Fished,11.1,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,267,-33.5707,115.1362,2014-12-15T06:22:00+08:00,Geographe Bay,Geographe Bay,Fished,23.2,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,270,-33.5205,115.4206,2014-12-13T06:00:00+08:00,Geographe Bay,Geographe Bay,Fished,13.7,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,271,-33.5937,115.2133,2014-12-12T06:06:00+08:00,Geographe Bay,Geographe Bay,Fished,27.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,272,-33.3815,115.4879,2014-12-14T08:37:00+08:00,Geographe Bay,Geographe Bay,Fished,11.7,Yes,Yes,Logan (ends 54:39),Molly
+2014-12_Geographe.Bay_stereoBRUVs,282,-33.5572,115.3322,2014-12-17T08:02:00+08:00,Geographe Bay,Geographe Bay,Fished,18.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,279,-33.5012,115.4379,2014-12-16T11:32:00+08:00,Geographe Bay,Geographe Bay,Fished,14.2,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,287,-33.594,115.2189,2014-12-15T10:50:00+08:00,Geographe Bay,Geographe Bay,Fished,16.4,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,288,-33.471,115.4776,2014-12-16T09:29:00+08:00,Geographe Bay,Geographe Bay,Fished,14.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,295,-33.5555,115.4661,2014-12-16T15:50:00+08:00,Geographe Bay,Geographe Bay,Fished,2.5,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,298,-33.5825,115.1301,2014-12-15T06:56:00+08:00,Geographe Bay,Geographe Bay,Fished,18.1,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,304,-33.5958,115.1454,2014-12-15T10:17:00+08:00,Geographe Bay,Geographe Bay,Fished,13.7,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,314,-33.5869,115.1628,2014-12-15T09:03:00+08:00,Geographe Bay,Geographe Bay,Fished,20,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,327,-33.4892,115.3942,2014-12-14T14:10:00+08:00,Geographe Bay,Geographe Bay,Fished,11.8,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,330,-33.5691,115.104,2014-12-15T06:44:00+08:00,Geographe Bay,Geographe Bay,No-take,17.7,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,331,-33.6031,115.253,2014-12-15T13:46:00+08:00,Geographe Bay,Geographe Bay,Fished,14.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,335,-33.5771,115.2267,2014-12-12T08:09:00+08:00,Geographe Bay,Geographe Bay,Fished,21.6,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,346,-33.6092,115.2393,2014-12-15T13:08:00+08:00,Geographe Bay,Geographe Bay,Fished,14,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,352,-33.4518,115.488,2014-12-16T08:45:00+08:00,Geographe Bay,Geographe Bay,Fished,15.2,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,362,-33.627,115.2948,2014-12-17T10:23:00+08:00,Geographe Bay,Geographe Bay,Fished,9.4,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,368,-33.5725,115.4513,2014-12-16T15:59:00+08:00,Geographe Bay,Geographe Bay,Fished,3.7,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,375,-33.5902,115.2206,2014-12-12T06:14:00+08:00,Geographe Bay,Geographe Bay,Fished,26.9,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,378,-33.5556,115.3912,2014-12-12T13:08:00+08:00,Geographe Bay,Geographe Bay,No-take,13.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,384,-33.4275,115.5142,2014-12-16T06:54:00+08:00,Geographe Bay,Geographe Bay,Fished,13.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,391,-33.5017,115.4101,2014-12-13T08:23:00+08:00,Geographe Bay,Geographe Bay,Fished,17,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,394,-33.5181,115.382,2014-12-16T13:18:00+08:00,Geographe Bay,Geographe Bay,Fished,19,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,395,-33.6073,115.3444,2014-12-17T10:08:00+08:00,Geographe Bay,Geographe Bay,Fished,9.2,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,399,-33.6143,115.313,2014-12-17T10:17:00+08:00,Geographe Bay,Geographe Bay,Fished,10.8,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,400,-33.3576,115.5517,2014-12-14T08:58:00+08:00,Geographe Bay,Geographe Bay,Fished,9.8,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,407,-33.4882,115.4275,2014-12-13T08:13:00+08:00,Geographe Bay,Geographe Bay,Fished,16.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,416,-33.6148,115.2806,2014-12-17T10:34:00+08:00,Geographe Bay,Geographe Bay,Fished,12.3,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,428,-33.4505,115.5572,2014-12-16T06:31:00+08:00,Geographe Bay,Geographe Bay,Fished,7.6,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,439,-33.6309,115.2731,2014-12-17T10:29:00+08:00,Geographe Bay,Geographe Bay,Fished,8.4,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,442,-33.5066,115.4194,2014-12-12T13:28:00+08:00,Geographe Bay,Geographe Bay,Fished,14.3,Yes,Yes,Curtin,Curtin
+2014-12_Geographe.Bay_stereoBRUVs,443,-33.5698,115.2025,2014-12-12T06:34:00+08:00,Geographe Bay,Geographe Bay,Fished,27,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,448,-33.3965,115.4931,2014-12-14T13:05:00+08:00,Geographe Bay,Geographe Bay,Fished,10.6,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,451,-33.4198,115.5529,2014-12-14T11:32:00+08:00,Geographe Bay,Geographe Bay,Fished,7.8,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,455,-33.5671,115.182,2014-12-15T08:42:00+08:00,Geographe Bay,Geographe Bay,Fished,24.9,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,458,-33.5151,115.5044,2014-12-16T10:58:00+08:00,Geographe Bay,Geographe Bay,Fished,6.2,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,463,-33.5151,115.5044,2014-12-12T08:03:00+08:00,Geographe Bay,Geographe Bay,Fished,24.3,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,474,-33.4681,115.5436,2014-12-16T06:23:00+08:00,Geographe Bay,Geographe Bay,Fished,6.8,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,480,-33.3476,115.5777,2014-12-14T09:06:00+08:00,Geographe Bay,Geographe Bay,Fished,7.4,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,490,-33.5613,115.3612,2014-12-17T06:20:00+08:00,Geographe Bay,Geographe Bay,Fished,13.4,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,492,-33.4638,115.4975,2014-12-16T08:40:00+08:00,Geographe Bay,Geographe Bay,Fished,14.7,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,496,-33.4851,115.4752,2014-12-16T10:42:00+08:00,Geographe Bay,Geographe Bay,Fished,15.3,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,499,-33.4517,115.5441,2014-12-16T06:36:00+08:00,Geographe Bay,Geographe Bay,Fished,9.9,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,503,-33.5845,115.3098,2014-12-17T07:48:00+08:00,Geographe Bay,Geographe Bay,Fished,16.3,Yes,Yes,Daphne (finishes at 55:48),Molly
+2014-12_Geographe.Bay_stereoBRUVs,506,-33.5174,115.4165,2014-12-16T11:23:00+08:00,Geographe Bay,Geographe Bay,Fished,14.1,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,512,-33.5094,115.4873,2014-12-16T11:03:00+08:00,Geographe Bay,Geographe Bay,Fished,10.6,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,523,-33.5634,115.1589,2014-12-15T08:35:00+08:00,Geographe Bay,Geographe Bay,Fished,26,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,527,-33.5894,115.2078,2014-12-12T06:16:00+08:00,Geographe Bay,Geographe Bay,Fished,26.8,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,528,-33.4811,115.4971,2014-12-16T08:34:00+08:00,Geographe Bay,Geographe Bay,Fished,14,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,538,-33.5839,115.3847,2014-12-17T05:53:00+08:00,Geographe Bay,Geographe Bay,Fished,11.6,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,544,-33.4464,115.4341,2014-12-14T13:36:00+08:00,Geographe Bay,Geographe Bay,Fished,12.3,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,551,-33.5735,115.3901,2014-12-17T05:58:00+08:00,Geographe Bay,Geographe Bay,No-take,11.7,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,554,-33.5577,115.3835,2014-12-17T06:13:00+08:00,Geographe Bay,Geographe Bay,No-take,12.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,560,-33.4382,115.5269,2014-12-16T06:49:00+08:00,Geographe Bay,Geographe Bay,Fished,14.6,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,567,-33.5867,115.276,2014-12-17T08:23:00+08:00,Geographe Bay,Geographe Bay,Fished,17.4,Yes,No,Curtin,N/A
+2014-12_Geographe.Bay_stereoBRUVs,572,-33.3913,115.5492,2014-12-14T10:54:00+08:00,Geographe Bay,Geographe Bay,Fished,8.1,Yes,No,Unknown,NA
+2014-12_Geographe.Bay_stereoBRUVs,579,-33.5017,115.3741,2014-12-16T13:10:00+08:00,Geographe Bay,Geographe Bay,Fished,22,Yes,No,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,583,-33.4784,115.3932,2014-12-14T13:55:00+08:00,Geographe Bay,Geographe Bay,Fished,12,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,587,-33.5935,115.1874,2014-12-15T11:03:00+08:00,Geographe Bay,Geographe Bay,Fished,16.6,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,586,-33.5309,115.386,2014-12-16T13:24:00+08:00,Geographe Bay,Geographe Bay,No-take,15.8,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,592,-33.5185,115.446,2014-12-16T11:15:00+08:00,Geographe Bay,Geographe Bay,Fished,12.3,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,599,-33.5021,115.4508,2014-12-13T06:22:00+08:00,Geographe Bay,Geographe Bay,Fished,13.9,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,602,-33.6202,115.2562,2014-12-15T12:57:00+08:00,Geographe Bay,Geographe Bay,Fished,11.2,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,608,-33.4552,115.4703,2014-12-16T09:01:00+08:00,Geographe Bay,Geographe Bay,Fished,16.7,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,611,-33.5421,115.459,2014-12-16T15:45:00+08:00,Geographe Bay,Geographe Bay,Fished,8.2,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,615,-33.5981,115.3328,2014-12-17T09:56:00+08:00,Geographe Bay,Geographe Bay,Fished,11.8,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,623,-33.6129,115.1556,2014-12-15T10:24:00+08:00,Geographe Bay,Geographe Bay,Fished,7.8,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,618,-33.5679,115.3528,2014-12-17T05:40:00+08:00,Geographe Bay,Geographe Bay,Fished,14.5,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,624,-33.421,115.4919,2014-12-16T07:03:00+08:00,Geographe Bay,Geographe Bay,Fished,17.5,Yes,No,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,633,-33.4712,115.4535,2014-12-16T09:18:00+08:00,Geographe Bay,Geographe Bay,Fished,16.2,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,634,-33.5337,115.4141,2014-12-16T15:30:00+08:00,Geographe Bay,Geographe Bay,Fished,13,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,640,-33.5162,115.4646,2014-12-16T11:10:00+08:00,Geographe Bay,Geographe Bay,Fished,11.5,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,647,-33.4926,115.4247,2014-12-13T08:17:00+08:00,Geographe Bay,Geographe Bay,Fished,15.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,650,-33.5131,115.3716,2014-12-16T13:14:00+08:00,Geographe Bay,Geographe Bay,Fished,21.1,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,666,-33.5511,115.3572,2014-12-17T06:25:00+08:00,Geographe Bay,Geographe Bay,No-take,15.6,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,656,-33.3713,115.5504,2014-12-14T09:28:00+08:00,Geographe Bay,Geographe Bay,Fished,9,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,672,-33.4004,115.5357,2014-12-14T11:45:00+08:00,Geographe Bay,Geographe Bay,Fished,8.4,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,682,-33.5696,115.3354,2014-12-17T07:57:00+08:00,Geographe Bay,Geographe Bay,Fished,15.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,684,-33.5845,115.1735,2014-12-15T09:00:00+08:00,Geographe Bay,Geographe Bay,Fished,20.6,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,688,-33.6026,115.3181,2014-12-17T09:52:00+08:00,Geographe Bay,Geographe Bay,Fished,12.8,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,694,-33.5281,115.3499,2014-12-16T13:32:00+08:00,Geographe Bay,Geographe Bay,Fished,21.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,698,-33.5246,115.4035,2014-12-12T13:25:00+08:00,Geographe Bay,Geographe Bay,Fished,14,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,704,-33.4848,115.5324,2014-12-16T06:15:00+08:00,Geographe Bay,Geographe Bay,Fished,7.45,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,711,-33.3695,115.5666,2014-12-14T09:24:00+08:00,Geographe Bay,Geographe Bay,Fished,8.4,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,714,-33.5793,115.1468,2014-12-15T08:26:00+08:00,Geographe Bay,Geographe Bay,Fished,21.1,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,719,-33.601,115.2325,2014-12-12T05:59:00+08:00,Geographe Bay,Geographe Bay,Fished,26.3,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,720,-33.3599,115.5835,2014-12-14T09:11:00+08:00,Geographe Bay,Geographe Bay,Fished,8.2,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,735,-33.562,115.1433,2014-12-15T06:27:00+08:00,Geographe Bay,Geographe Bay,Fished,26.7,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,736,-33.3851,115.5606,2014-12-14T10:59:00+08:00,Geographe Bay,Geographe Bay,Fished,8.2,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,746,-33.5794,115.3571,2014-12-17T05:45:00+08:00,Geographe Bay,Geographe Bay,Fished,13.2,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,748,-33.3696,115.5138,2014-12-14T08:46:00+08:00,Geographe Bay,Geographe Bay,Fished,11.1,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,752,-33.3766,115.5914,2014-12-14T09:15:00+08:00,Geographe Bay,Geographe Bay,Fished,6.2,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,764,-33.3744,115.4961,2014-12-14T08:43:00+08:00,Geographe Bay,Geographe Bay,Fished,11.6,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,762,-33.5199,115.4149,2014-12-12T13:44:00+08:00,Geographe Bay,Geographe Bay,Fished,13,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,782,-33.5142,115.4368,2014-12-13T06:06:00+08:00,Geographe Bay,Geographe Bay,Fished,13.7,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,779,-33.5817,115.2264,2014-12-17T08:11:00+08:00,Geographe Bay,Geographe Bay,Fished,19,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,783,-33.5817,115.2264,2014-12-12T08:12:00+08:00,Geographe Bay,Geographe Bay,Fished,21.5,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,784,-33.6014,115.1774,2014-12-15T11:07:00+08:00,Geographe Bay,Geographe Bay,Fished,13.4,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,791,-33.4851,115.4435,2014-12-13T08:03:00+08:00,Geographe Bay,Geographe Bay,Fished,15,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,794,-33.6248,115.2039,2014-12-15T10:38:00+08:00,Geographe Bay,Geographe Bay,No-take,7.4,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,800,-33.5732,115.1935,2014-12-15T08:48:00+08:00,Geographe Bay,Geographe Bay,Fished,22.9,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,807,-33.494,115.4907,2014-12-16T10:50:00+08:00,Geographe Bay,Geographe Bay,Fished,14,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,810,-33.5513,115.3766,2014-12-16T13:44:00+08:00,Geographe Bay,Geographe Bay,No-take,14.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,816,-33.3996,115.5633,2014-12-14T11:09:00+08:00,Geographe Bay,Geographe Bay,Fished,7.9,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,823,-33.5857,115.2872,2014-12-17T08:19:00+08:00,Geographe Bay,Geographe Bay,Fished,16.2,Yes,No,Curtin,Curtin
+2014-12_Geographe.Bay_stereoBRUVs,826,-33.5427,115.4006,2014-12-13T05:45:00+08:00,Geographe Bay,Geographe Bay,No-take,12.8,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,828,-33.4175,115.5296,2014-12-14T11:38:00+08:00,Geographe Bay,Geographe Bay,Fished,7.6,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,832,-33.4556,115.5197,2014-12-16T06:43:00+08:00,Geographe Bay,Geographe Bay,Fished,12.6,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,839,-33.4873,115.4085,2014-12-16T13:00:00+08:00,Geographe Bay,Geographe Bay,Fished,20,Yes,No,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,842,-33.5681,115.1149,2014-12-15T06:40:00+08:00,Geographe Bay,Geographe Bay,Fished,22.3,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,843,-33.6,115.2586,2014-12-15T13:43:00+08:00,Geographe Bay,Geographe Bay,Fished,14.6,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,848,-33.3519,115.5323,2014-12-14T08:53:00+08:00,Geographe Bay,Geographe Bay,Fished,10.4,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,855,-33.4901,115.4358,2014-12-13T08:09:00+08:00,Geographe Bay,Geographe Bay,Fished,15.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,858,-33.5573,115.3462,2014-12-17T06:29:00+08:00,Geographe Bay,Geographe Bay,Fished,16.6,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,864,-33.5833,115.3721,2014-12-17T05:50:00+08:00,Geographe Bay,Geographe Bay,Fished,12.4,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,879,-33.6169,115.1829,2014-12-15T10:31:00+08:00,Geographe Bay,Geographe Bay,Fished,8.1,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,880,-33.5366,115.4444,2014-12-16T15:41:00+08:00,Geographe Bay,Geographe Bay,Fished,10.9,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,1038,-33.5333,115.42,2014-12-16T15:33:00+08:00,Geographe Bay,Geographe Bay,Fished,13.9,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,1108,-33.558,115.4144,2014-12-16T15:20:00+08:00,Geographe Bay,Geographe Bay,No-take,11.9,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,10001,-33.4217,115.3722,2014-12-14T06:17:00+08:00,Geographe Bay,Geographe Bay,Fished,15.9,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,10003,-33.4213,115.3594,2014-12-14T06:23:00+08:00,Geographe Bay,Geographe Bay,Fished,16.5,Yes,No,Molly,NA
+2014-12_Geographe.Bay_stereoBRUVs,10005,-33.4778,115.3694,2014-12-14T14:03:00+08:00,Geographe Bay,Geographe Bay,Fished,13.7,Yes,Yes,Curtin,Curtin
+2014-12_Geographe.Bay_stereoBRUVs,11R2,-33.3967,115.5076,2014-12-11T12:26:00+08:00,Geographe Bay,Geographe Bay,Fished,18.6,Yes,Yes,Brooke,Molly
+2014-12_Geographe.Bay_stereoBRUVs,11R3,-33.4122,115.5205,2014-12-11T12:40:00+08:00,Geographe Bay,Geographe Bay,Fished,14.7,Yes,Yes,Brooke,Molly
+2014-12_Geographe.Bay_stereoBRUVs,11R4,-33.4197,115.5176,2014-12-11T12:48:00+08:00,Geographe Bay,Geographe Bay,Fished,14.5,Yes,Yes,Brooke,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC1,-33.5932,115.2133,2014-12-12T06:09:00+08:00,Geographe Bay,Geographe Bay,Fished,26.5,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC2,-33.5916,115.2379,2014-12-12T08:23:00+08:00,Geographe Bay,Geographe Bay,Fished,17.6,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC3,-33.5915,115.2415,2014-12-12T08:32:00+08:00,Geographe Bay,Geographe Bay,Fished,17.9,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC5,-33.5621,115.3443,2014-12-12T11:16:00+08:00,Geographe Bay,Geographe Bay,Fished,14.2,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC6,-33.5711,115.3481,2014-12-12T11:22:00+08:00,Geographe Bay,Geographe Bay,Fished,14.7,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC7,-33.5118,115.4179,2014-12-12T13:38:00+08:00,Geographe Bay,Geographe Bay,Fished,15.2,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC8,-33.5149,115.4182,2014-12-12T13:41:00+08:00,Geographe Bay,Geographe Bay,Fished,14.1,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,12RC9,-33.5162,115.4064,2014-12-12T13:48:00+08:00,Geographe Bay,Geographe Bay,Fished,14.5,Yes,Yes,Molly,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC1,-33.506,115.4308,2014-12-13T06:11:00+08:00,Geographe Bay,Geographe Bay,Fished,13.8,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC11,-33.374,115.3693,2014-12-13T13:23:00+08:00,Geographe Bay,Geographe Bay,Fished,31,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC12,-33.3744,115.3668,2014-12-13T13:25:00+08:00,Geographe Bay,Geographe Bay,Fished,31.3,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC13,-33.3755,115.3631,2014-12-13T13:31:00+08:00,Geographe Bay,Geographe Bay,Fished,31.1,Yes,Yes,Curtin,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC15,-33.3768,115.3559,2014-12-13T13:39:00+08:00,Geographe Bay,Geographe Bay,Fished,32.5,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC4,-33.4994,115.3965,2014-12-13T08:30:00+08:00,Geographe Bay,Geographe Bay,Fished,19.5,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC5,-33.4839,115.4656,2014-12-13T10:05:00+08:00,Geographe Bay,Geographe Bay,Fished,26.8,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC6,-33.381,115.3892,2014-12-13T13:07:00+08:00,Geographe Bay,Geographe Bay,Fished,29.7,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC7,-33.3774,115.3861,2014-12-13T13:10:00+08:00,Geographe Bay,Geographe Bay,Fished,29.5,Yes,Yes,Daphne,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC8,-33.3726,115.3791,2014-12-13T13:14:00+08:00,Geographe Bay,Geographe Bay,Fished,30.4,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,13RC9,-33.3731,115.3748,2014-12-13T13:18:00+08:00,Geographe Bay,Geographe Bay,Fished,30.9,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR-BOB,-33.5924,115.2206,2014-12-17T12:23:00+08:00,Geographe Bay,Geographe Bay,Fished,16.7,Yes,Yes,Curtin,Curtin
+2014-12_Geographe.Bay_stereoBRUVs,GBR1-1,-33.5936,115.1963,2014-12-17T12:02:00+08:00,Geographe Bay,Geographe Bay,Fished,17.3,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,GBR1-2,-33.5936,115.1995,2014-12-17T12:05:00+08:00,Geographe Bay,Geographe Bay,Fished,16,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR1-3,-33.5938,115.2023,2014-12-17T12:07:00+08:00,Geographe Bay,Geographe Bay,Fished,15.8,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR1-4,-33.5935,115.2055,2014-12-17T12:09:00+08:00,Geographe Bay,Geographe Bay,Fished,16.8,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR2-1,-33.5938,115.1907,2014-12-17T13:40:00+08:00,Geographe Bay,Geographe Bay,Fished,17.7,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,GBR2-2,-33.594,115.1884,2014-12-17T13:42:00+08:00,Geographe Bay,Geographe Bay,Fished,16.2,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,GBR2-3,-33.5941,115.1865,2014-12-17T13:44:00+08:00,Geographe Bay,Geographe Bay,Fished,16.4,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,GBR2-4,-33.5937,115.193,2014-12-17T13:38:00+08:00,Geographe Bay,Geographe Bay,Fished,16.2,Yes,No,Curtin,NA
+2014-12_Geographe.Bay_stereoBRUVs,GBR3-1,-33.5945,115.1819,2014-12-17T13:53:00+08:00,Geographe Bay,Geographe Bay,Fished,17.6,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,GBR3-2,-33.5937,115.193,2014-12-17T13:30:00+08:00,Geographe Bay,Geographe Bay,Fished,17.9,Yes,No,Unknown,NA
+2014-12_Geographe.Bay_stereoBRUVs,GBR3-3,-33.5937,115.184,2014-12-17T13:47:00+08:00,Geographe Bay,Geographe Bay,Fished,17,Yes,Yes,Curtin,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,GBR3-4,-33.5939,115.1851,2014-12-17T13:46:00+08:00,Geographe Bay,Geographe Bay,Fished,16.6,Yes,Yes,Unknown,Unknown
+2014-12_Geographe.Bay_stereoBRUVs,GBR4-1,-33.5933,115.2081,2014-12-17T12:11:00+08:00,Geographe Bay,Geographe Bay,Fished,16.1,Yes,Yes,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR4-2,-33.5928,115.2102,2014-12-17T12:13:00+08:00,Geographe Bay,Geographe Bay,Fished,16.3,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR5-1,-33.5932,115.2119,2014-12-17T12:15:00+08:00,Geographe Bay,Geographe Bay,Fished,16.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR5-2,-33.5927,115.2148,2014-12-17T12:17:00+08:00,Geographe Bay,Geographe Bay,Fished,16.6,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,GBR5-3,-33.5924,115.2175,2014-12-17T12:19:00+08:00,Geographe Bay,Geographe Bay,Fished,16.4,Yes,No,Logan,Molly
+2014-12_Geographe.Bay_stereoBRUVs,RB1,-33.5346,115.2177,2014-12-09T06:49:00+08:00,Geographe Bay,Geographe Bay,Fished,28,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,RB2,-33.5086,115.2255,2014-12-09T09:39:00+08:00,Geographe Bay,Geographe Bay,Fished,30,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,RC1,-33.4628,115.24,2014-12-09T10:09:00+08:00,Geographe Bay,Geographe Bay,Fished,34.2,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,RC2,-33.4864,115.178,2014-12-09T10:34:00+08:00,Geographe Bay,Geographe Bay,Fished,34.3,Yes,Yes,Hayley,Molly
+2014-12_Geographe.Bay_stereoBRUVs,RC3,-33.4705,115.1684,2014-12-09T13:11:00+08:00,Geographe Bay,Geographe Bay,Fished,35,Yes,Yes,Hayley,Molly
