@@ -43,7 +43,9 @@ function(input, output, session) {
       addTiles() %>%
       addCircleMarkers(
         radius = ~(count),
-        stroke = FALSE, fillOpacity = 0.5)
+        stroke = FALSE,
+        fillOpacity = 0.5,
+        label = ~ count)
 
     dat.big <- data() %>%
       dplyr::filter(scientific %in% input$fish) %>%
@@ -54,7 +56,9 @@ function(input, output, session) {
       addTiles() %>%
       addCircleMarkers(
         radius = ~(count),
-        stroke = FALSE, fillOpacity = 0.5)
+        stroke = FALSE,
+        fillOpacity = 0.5,
+        label = ~ count)
 
     leaflets <- leafsync::sync(leaf.small, leaf.big)
 
