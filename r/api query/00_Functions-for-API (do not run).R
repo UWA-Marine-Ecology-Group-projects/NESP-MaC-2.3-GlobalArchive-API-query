@@ -1,3 +1,22 @@
+
+# Define the Indicator species ----
+indicator_species <- c("Chrysophrys auratus",
+                       "Choerodon rubescens",
+                       "Glaucosoma hebraicum",
+                       "Epinephelides armatus",
+                       "Centroberyx gerrardi",
+                       "Nemadactylus valenciennesi",
+                       "Achoerodus gouldii",
+                       "Polyprion oxygeneios",
+                       "Hyporthodus octofasciatus",
+                       "Hyperoglyphe antarctica",
+                       "Lethrinus punctulatus",
+                       "Epinephelus multinotatus",
+                       "Pristipomoides multidens",
+                       "Lethrinus miniatus",
+                       "Lethrinus nebulosus")
+
+
 # Extract Metadata ----
 ga.api.metadata <- function(synthesis_id) {
 

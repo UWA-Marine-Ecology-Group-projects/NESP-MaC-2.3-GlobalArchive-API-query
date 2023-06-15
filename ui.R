@@ -35,8 +35,10 @@ dashboardPage(
                 tableOutput("data"),
 
                 box(
-                  title = "Interactive spatial plot",
+                  title = "Interactive spatial plots",
                   width = 12,
+                  column(width = 6, align="center", h3("Smaller than length at Maturity")),
+                  column(width = 6, align="center", h3("Larger than length at Maturity")),
                   uiOutput("leaflet", height = "500px")
                 )
               )
