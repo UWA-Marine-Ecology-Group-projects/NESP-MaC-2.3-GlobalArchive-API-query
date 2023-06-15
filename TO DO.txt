@@ -1,11 +1,4 @@
 # To do list
-HIGH PRIORITY
-- Plot with bubble plot by species and size class for indicator species
-- Temporal plot by zone
-- Create a new VM
-- Update messages in functions
-- Turn into shiny app
-
 LOW PRIORITY
 - Turn habitat data into levels
 - Upload to synthesis on GlobalArchive API
