@@ -2,6 +2,64 @@ library(shinydashboard)
 library(leaflet)
 library(dplyr)
 library(leafsync)
+library(stringr)
+library(ggplot2)
+library(leafgl)
+
+se <- function(x) {
+  sd(x) / sqrt(length(x))
+}
+
+
+se.min <- function(x) {
+  (mean(x)) - se(x)
+}
+
+se.max <- function(x) {
+  (mean(x)) + se(x)
+}
+
+geo.pal <- c("National Park Zone" = "#7BBC63",
+             "Sanctuary Zone" = "#206108", # Made darker so it doesn't clash with Commonwealth
+             "General Use Zone" = "#bd405f", # Made darker so it doesn't clash with Commonwealth
+             "Habitat Protection Zone" = "#FFF8A3",
+             "Special Purpose Zone (Mining Exclusion)" = "#6CAFDF",
+             "Multiple Use Zone" = "#B8E5FA")
+
+ning.pal <- c("National Park Zone" = "#7BBC63",
+              "Sanctuary Zone" = "#206108", # Made darker so it doesn't clash with Commonwealth
+              "General Use" = "#bd405f", # Made darker so it doesn't clash with Commonwealth
+              "Multiple Use Zone" = "#B8E5FA",
+              "Recreational Use Zone" = "#FDB933",
+              "Special Purpose Zone (Benthic Protection)" = "#c76bc4"
+              )
+
+
+ggplot_mpatheme <- function() {
+  ggplot2::theme_bw() +
+    ggplot2::theme( # use theme_get() to see available options
+      panel.grid = ggplot2::element_blank(),
+      panel.border = ggplot2::element_blank(),
+      axis.line = ggplot2::element_line(colour = "black"),
+      panel.grid.major = ggplot2::element_blank(),
+      panel.grid.minor = ggplot2::element_blank(),
+      legend.background = ggplot2::element_blank(),
+      legend.key = ggplot2::element_blank(), # switch off the rectangle around symbols in the legend
+      legend.text = ggplot2::element_text(size = 12),
+      legend.title = ggplot2::element_blank(),
+      # legend.position = "top",
+      text = ggplot2::element_text(size = 12),
+      strip.text.y = ggplot2::element_text(size = 12, angle = 0),
+      axis.title.x = ggplot2::element_text(vjust = 0.3, size = 12),
+      axis.title.y = ggplot2::element_text(vjust = 0.6, angle = 90, size = 12),
+      axis.text.y = ggplot2::element_text(size = 12),
+      axis.text.x = ggplot2::element_text(size = 12),
+      axis.line.x = ggplot2::element_line(colour = "black", size = 0.5, linetype = "solid"),
+      axis.line.y = ggplot2::element_line(colour = "black", size = 0.5, linetype = "solid"),
+      strip.background = ggplot2::element_blank(),
+      plot.title = ggplot2::element_text(color = "black", size = 12, face = "bold.italic")
+    )
+}
 
 function(input, output, session) {
 
@@ -97,4 +155,60 @@ function(input, output, session) {
 
   })
 
+
+  output$temporal <- renderPlot({
+
+    dat <- data() %>%
+      dplyr::filter(scientific %in% "All indicator species") %>%
+      # dplyr::filter(class %in% "< 100%") %>%
+      dplyr::mutate(year = as.numeric(str_sub(time_stamp, 1, 4))) %>%
+      glimpse()
+
+    glimpse(names(dat))
+
+    if(input$dataset %in% "Ningaloo"){
+      pal <- ning.pal
+    } else {
+      pal <- geo.pal
+    }
+
+    ggplot(dat, aes(x = year, y = count, fill = zone)) +
+      stat_summary(fun.y = mean, geom = "point", shape = 23, size = 6, col = "black", position = position_dodge(width = 0.5)) +
+      stat_summary(fun.ymin = se.min, fun.ymax = se.max, geom = "errorbar", width = 0.1, col = "black", position = position_dodge(width = 0.5)) +
+      xlab("Year") +
+      ylab("Average abundance per sample \n(+/- SE)") +
+      stat_smooth(method = "gam", formula = y ~ s(x, k = 3), size = 1, col = "black") +
+      scale_x_continuous(
+        breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 2),
+        expand = expand_scale(mult = c(0, 0.05))
+      ) +
+      ggplot_mpatheme() +
+      scale_fill_manual(values = c(pal)) +
+      facet_wrap(class ~ ., scales = "free", ncol = 2)
+  })
+
+  output$temporal.status <- renderPlot({
+
+    dat <- data() %>%
+      dplyr::filter(scientific %in% "All indicator species") %>%
+      dplyr::mutate(year = as.numeric(str_sub(time_stamp, 1, 4))) %>%
+      glimpse()
+
+    glimpse(names(dat))
+
+    ggplot(dat, aes(x = year, y = count, fill = status)) +
+      stat_summary(fun.y = mean, geom = "point", shape = 23, size = 6, col = "black", position = position_dodge(width = 0.5)) +
+      stat_summary(fun.ymin = se.min, fun.ymax = se.max, geom = "errorbar", width = 0.1, col = "black", position = position_dodge(width = 0.5)) +
+      xlab("Year") +
+      ylab("Average abundance per sample \n(+/- SE)") +
+      stat_smooth(method = "gam", formula = y ~ s(x, k = 3), size = 1, col = "black") +
+      scale_x_continuous(
+        breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 2),
+        expand = expand_scale(mult = c(0, 0.05))
+      ) +
+      ggplot_mpatheme() +
+      scale_fill_manual(values = c("Fished" = "#b9e6fb",
+                                   "No-take" = "#7bbc63")) +
+      facet_wrap(class ~ ., scales = "free", ncol = 2)
+  })
 }

@@ -17,6 +17,24 @@ indicator_species <- c("Chrysophrys auratus",
                        "Lethrinus nebulosus")
 
 
+# Read in marine parks ----
+marineparks <- readRDS("data/spatial/marineparks.RDS")
+
+# unique(marineparks$ZONE_TYPE)
+
+marineparks$ZONE_TYPE <- str_replace_all(marineparks$ZONE_TYPE, c("[()]" = "",
+                                                                  " IUCN IA" = "",
+                                                                  " IUCN Ia" = "",
+                                                                  " IUCN II" = "",
+                                                                  " IUCN IV" = "",
+                                                                  " IUCN VI" = "",
+                                                                  " IUCN V" = "",
+                                                                  "Benthic Protection" = "(Benthic Protection)",
+                                                                  "Mining Exclusion" = "(Mining Exclusion)"
+                                                                  ))
+
+# unique(marineparks$ZONE_TYPE)
+
 # Extract Metadata ----
 ga.api.metadata <- function(synthesis_id) {
 
@@ -35,11 +53,13 @@ ga.api.metadata <- function(synthesis_id) {
 
   metadata <- parsed_data$results
 
+  message(paste("Connection successful. Downloading metadata for synthesis:", name, sep = " "))
+
   # Need to stop when next is NULL (parsed_data$next)
   while (!next_page == 0) {
     page_number <- page_number + 1 # Increase page number
 
-    message(paste0("Up to page ", page_number))
+    # message(paste0("Up to page ", page_number))
 
     new_response <- GET(paste0("https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=", synthesis_id, "&page=", page_number),
                         authenticate("test", "gatesttest"),
@@ -56,7 +76,7 @@ ga.api.metadata <- function(synthesis_id) {
     next_page <- length(new_parsed_data$`next`)
   }
 
-  message("Finished downloading")
+  message(paste("Finished downloading metadata for synthesis:", name, sep = " "))
 
   return(metadata)
 
@@ -78,7 +98,7 @@ ga.api.count <- function(synthesis_id) {
 
   count <- parsed_data$results
 
-  message("Connection successful. Please note this may take a while to run for large syntheses")
+  message(paste("Connection successful. Downloading count for synthesis:", name, "(Please note this may take a while to run for large syntheses)", sep = " "))
 
   while (!next_page == 0) {
     page_number <- page_number + 1 # Increase page number
@@ -100,7 +120,7 @@ ga.api.count <- function(synthesis_id) {
     next_page <- length(new_parsed_data$`next`)
   }
 
-  message("Finished downloading")
+  message(paste("Finished downloading count for synthesis:", name, sep = " "))
 
   return(count)
 
@@ -124,7 +144,7 @@ ga.api.length <- function(synthesis_id) {
 
   length <- parsed_data$results
 
-  message("Connection successful. Please note this may take a while to run for large syntheses")
+  message(paste("Connection successful. Downloading length for synthesis:", name, "(Please note this may take a while to run for large syntheses)", sep = " "))
 
   while (!next_page == 0) {
     page_number <- page_number + 1 # Increase page number
@@ -145,7 +165,7 @@ ga.api.length <- function(synthesis_id) {
     next_page <- length(new_parsed_data$`next`)
   }
 
-  message("Finished downloading")
+  message(paste("Finished downloading length for synthesis:", name, sep = " "))
 
   return(length)
 }
@@ -156,7 +176,7 @@ ga.api.species.list <- function(data){
 
   species_list <- data.frame()
 
-  message("Please note this may take a while to run for large syntheses")
+  message(paste("Connection successful. Downloading species list for synthesis:", name, "(Please note this may take a while to run for large syntheses)", sep = " "))
 
   for(species in seq(1:length(unique.species))){
 
@@ -177,7 +197,7 @@ ga.api.species.list <- function(data){
     dplyr::rename(subject = url) %>%
     distinct()
 
-  message("Finished downloading")
+  message(paste("Finished downloading species list for synthesis:", name, sep = " "))
 
   return(species_list)
 }

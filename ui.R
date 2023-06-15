@@ -2,6 +2,7 @@ library(shinydashboard)
 library(leaflet)
 library(dplyr)
 library(leafsync)
+library(stringr)
 
 dashboardPage(
   dashboardHeader(title = "Workshop Demo"),
@@ -40,7 +41,24 @@ dashboardPage(
                   column(width = 6, align="center", h3("Smaller than length at Maturity")),
                   column(width = 6, align="center", h3("Larger than length at Maturity")),
                   uiOutput("leaflet", height = "500px")
+                ),
+
+
+                box(
+                  title = "Temporal plot by Status - All indicator species",
+                  width = 12,
+                  # column(width = 12, plotOutput("temporal")),
+                  column(width = 12, plotOutput("temporal.status"))
+                ),
+
+                box(
+                  title = "Temporal plot by Zone - All indicator species",
+                  width = 12,
+                  column(width = 12, plotOutput("temporal"))#,
+                  # column(width = 12, plotOutput("temporal.status"))
                 )
+
+
               )
       ),
 
