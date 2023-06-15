@@ -7,26 +7,14 @@ library(RJSONIO)
 # TODO turn this into a package.
 source("r/api query/00_Functions-for-API (do not run).R")
 
-# Define the Indicator species ----
-indicator_species <- c("Chrysophrys auratus",
-                       "Choerodon rubescens",
-                       "Glaucosoma hebraicum",
-                       "Epinephelides armatus",
-                       "Centroberyx gerrardi",
-                       "Nemadactylus valenciennesi",
-                       "Achoerodus gouldii",
-                       "Polyprion oxygeneios",
-                       "Hyporthodus octofasciatus",
-                       "Hyperoglyphe antarctica",
-                       "Lethrinus punctulatus",
-                       "Epinephelus multinotatus",
-                       "Pristipomoides multidens",
-                       "Lethrinus miniatus",
-                       "Lethrinus nebulosus")
-
 # Add Synthesis ID from web version ----
+# Run this version to update the shiny ----
 syntheses <- data.frame(name = c("Geographe-bay", "Ningaloo"),
-                        id   = c(14,              15))
+                        id   = c(14,  15))
+
+# Run this version for a quick demo ----
+syntheses <- data.frame(name = c("Geographe-bay"),#, "Ningaloo"
+                        id   = c(14))             #,  15
 
 # Loop through syntheses----
 for(row.num in 1:nrow(syntheses)){
@@ -77,12 +65,22 @@ for(row.num in 1:nrow(syntheses)){
     dplyr::select(sample, family, genus, species, class, count, scientific) %>%
     dplyr::left_join(., metadata)
 
+  length_sum <- length_class %>%
+    dplyr::group_by(sample, class) %>%
+    dplyr::summarise(count = sum(count)) %>%
+    ungroup() %>%
+    dplyr::mutate(scientific = "All indicator species") %>%
+    dplyr::left_join(., metadata)
+
+  length_combined <- bind_rows(length_sum, length_class)
+
   # Save raw data (if needed) ----
   saveRDS(metadata, paste0("output/", name, "_metadata.RDS"))
   saveRDS(count_with_species, paste0("output/", name, "_count.RDS"))
   saveRDS(length_with_species, paste0("output/", name, "_length.RDS"))
-  saveRDS(length_class, paste0("output/", name, "_length-class.RDS"))
+  saveRDS(length_combined, paste0("output/", name, "_length-class.RDS"))
 
 }
 
 # PLOTS ----
+

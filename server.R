@@ -9,6 +9,7 @@ function(input, output, session) {
 
     if(input$dataset %in% "Geographe Bay") {
       data <- readRDS("output/Geographe-bay_length-class.RDS")
+
     } else {
       data <- readRDS("output/Ningaloo_length-class.RDS")
     }
