@@ -106,3 +106,94 @@ for(row.num in 1:nrow(syntheses)){
   saveRDS(length_combined, paste0("output/", name, "_length-class.RDS"))
 
 }
+
+
+
+library(httr)
+library(feather)
+
+# API endpoint URL
+url <- "https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=14?format=feather"
+
+# Username and password for basic authentication
+username <- "test"
+password <- "gatesttest"
+
+# Send GET request with basic authentication
+response <- GET(url, authenticate(username, password))
+
+# Check if the request was successful
+if (status_code(response) == 200) {
+  # Prepare a temp file to make Arrow/Feather happy
+  tf <- tempfile(fileext = ".arrow")
+  # on.exit(unlink(tf))
+
+  # Get the raw content
+  raw_content <- content(response, "raw")
+
+  # Write the raw content to the temporary file
+  writeBin(raw_content, temp_file)
+
+  # Read the Feather file from file-like object
+  table <- feather::read_feather(tf)
+
+  # Display the table
+  print(table)
+} else {
+  # Request was not successful
+  cat("Request failed with status code:", status_code(response))
+}
+
+
+
+
+
+# BRROOKE
+
+
+# Install and load the 'feather' package
+if (!require(feather)) {
+  install.packages("feather")
+}
+library(feather)
+
+# Function to read a Feather file from an API
+read_feather_from_api <- function(url) {
+  # Fetch the Feather file from the API
+  response <- httr::GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (httr::status_code(response) != 200) {
+    stop("Error: Failed to retrieve the Feather file.")
+  }
+
+  # Create a temporary file to store the Feather data
+  temp_file <- tempfile(fileext = ".feather")
+
+  # Save the Feather data to the temporary file
+  httr::write_disk(response, path = temp_file, overwrite = TRUE)
+
+  write_feather(
+    response, temp_file
+  )
+
+  # Read the Feather file
+  data <- feather::read_feather(temp_file)
+
+  # Clean up the temporary file
+  unlink(temp_file)
+
+  # Return the data
+  return(data)
+}
+
+# Usage example
+feather_url <- "https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=14?format=feather"  # Replace with your API URL
+data <- read_feather_from_api(feather_url)
+
+# Display the data
+print(data)
+
+
+
+
