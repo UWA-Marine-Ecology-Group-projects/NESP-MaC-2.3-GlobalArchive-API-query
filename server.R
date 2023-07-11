@@ -179,10 +179,11 @@ function(input, output, session) {
       ylab("Average abundance per sample \n(+/- SE)") +
       stat_smooth(method = "gam", formula = y ~ s(x, k = 3), size = 1, col = "black") +
       scale_x_continuous(
-        breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 2),
-        expand = expand_scale(mult = c(0, 0.05))
+        breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1),
+        expand = expand_scale(mult = c(0.25, 0.25))
       ) +
       ggplot_mpatheme() +
+      geom_vline(xintercept = 2018, linetype = 3) +
       scale_fill_manual(values = c(pal)) +
       facet_wrap(class ~ ., scales = "free", ncol = 2)
   })
@@ -203,10 +204,11 @@ function(input, output, session) {
       ylab("Average abundance per sample \n(+/- SE)") +
       stat_smooth(method = "gam", formula = y ~ s(x, k = 3), size = 1, col = "black") +
       scale_x_continuous(
-        breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 2),
-        expand = expand_scale(mult = c(0, 0.05))
+        breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1),
+        expand = expand_scale(mult = c(0.25, 0.25))
       ) +
       ggplot_mpatheme() +
+      geom_vline(xintercept = 2018, linetype = 3) +
       scale_fill_manual(values = c("Fished" = "#b9e6fb",
                                    "No-take" = "#7bbc63")) +
       facet_wrap(class ~ ., scales = "free", ncol = 2)

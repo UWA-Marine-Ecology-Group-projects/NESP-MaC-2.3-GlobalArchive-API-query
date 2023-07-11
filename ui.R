@@ -9,8 +9,8 @@ dashboardPage(
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Fish", tabName = "fish", icon = icon("fish")),
-      menuItem("Habitat", tabName = "habitat", icon = icon("tree"))
+      menuItem("Fish", tabName = "fish", icon = icon("fish"))#,
+      # menuItem("Habitat", tabName = "habitat", icon = icon("tree"))
     )
   ),
 
