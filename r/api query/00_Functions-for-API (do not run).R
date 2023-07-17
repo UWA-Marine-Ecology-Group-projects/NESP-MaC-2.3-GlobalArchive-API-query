@@ -1,3 +1,5 @@
+username <- "test"
+password <- "gatesttest"
 
 # Define the Indicator species ----
 indicator_species <- c("Chrysophrys auratus",
@@ -20,8 +22,6 @@ indicator_species <- c("Chrysophrys auratus",
 # Read in marine parks ----
 marineparks <- readRDS("data/spatial/marineparks.RDS")
 
-# unique(marineparks$ZONE_TYPE)
-
 marineparks$ZONE_TYPE <- str_replace_all(marineparks$ZONE_TYPE, c("[()]" = "",
                                                                   " IUCN IA" = "",
                                                                   " IUCN Ia" = "",
@@ -33,50 +33,89 @@ marineparks$ZONE_TYPE <- str_replace_all(marineparks$ZONE_TYPE, c("[()]" = "",
                                                                   "Mining Exclusion" = "(Mining Exclusion)"
                                                                   ))
 
-# unique(marineparks$ZONE_TYPE)
+# Get species list ----
+ga.api.species.list <- function() {
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/GlobalArchiveAustralianFishList/?format=feather")
+
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
+
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
+
+    # Read the Feather file from the input stream
+    species_list <- arrow::read_feather(raw_connection)
+
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
+  }
+
+  return(species_list)
+
+}
+
+# API call for Species Information ----
+species_list <- ga.api.species.list() %>%
+  dplyr::rename(subject = url)
+
 
 # Extract Metadata ----
 ga.api.metadata <- function(synthesis_id) {
 
-  ## Initlialize request with page 1 ----
-  page_number = 1
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=", synthesis_id, "&format=feather")
 
-  response <- GET(paste0("https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=", synthesis_id, "&page=", page_number),
-                  authenticate("test", "gatesttest"),
-                  # add_headers(Authorization = "Bearer your_access_token"),
-                  content_type("application/json"))
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
 
-  json_data <- content(response, "text", encoding = "UTF-8")
-  parsed_data <- jsonlite::fromJSON(json_data)
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
 
-  next_page <- length(parsed_data$`next`)
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
 
-  metadata <- parsed_data$results
+    # Read the Feather file from the input stream
+    metadata_raw <- arrow::read_feather(raw_connection) %>%
+      dplyr::mutate(coordinates = str_replace_all(.$coordinates, c("SRID=4326;POINT " = "", "[()]" = ""))) %>%
+      tidyr::separate(coordinates, into = c("longitude", "latitude"), sep = " ") %>%
+      dplyr::mutate(latitude = as.numeric(latitude), longitude = as.numeric(longitude))%>%
+      dplyr::mutate(sample = url) %>%
+      dplyr::select(-c(status))
 
-  message(paste("Connection successful. Downloading metadata for synthesis:", name, sep = " "))
+    # Add marine parks to metadata ----
+    metadata_spatial <- metadata_raw
 
-  # Need to stop when next is NULL (parsed_data$next)
-  while (!next_page == 0) {
-    page_number <- page_number + 1 # Increase page number
+    # Add spatial
+    coordinates(metadata_spatial) <- c('longitude', 'latitude')
+    proj4string(metadata_spatial) <- CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
 
-    # message(paste0("Up to page ", page_number))
+    # Add in marine spatial zoning information ----
+    metadata <- bind_cols(metadata_raw, over(metadata_spatial, marineparks)) %>%
+      dplyr::rename(zone = ZONE_TYPE) %>%
+      tidyr::replace_na(list(status = "Fished"))
 
-    new_response <- GET(paste0("https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=", synthesis_id, "&page=", page_number),
-                        authenticate("test", "gatesttest"),
-                        # add_headers(Authorization = "Bearer your_access_token"),
-                        content_type("application/json"))
-
-    new_json_data <- content(new_response, "text", encoding = "UTF-8")
-    new_parsed_data <- jsonlite::fromJSON(new_json_data)
-
-    new_metadata <- new_parsed_data$results
-
-    metadata <- bind_rows(metadata, new_metadata)
-
-    next_page <- length(new_parsed_data$`next`)
+    metadata$zone <- fct_relevel(metadata$zone,
+                                 "National Park Zone",
+                                 "Sanctuary Zone",
+                                 "General Use",
+                                 "General Use Zone",
+                                 "Habitat Protection Zone",
+                                 "Multiple Use Zone",
+                                 "Recreational Use Zone",
+                                 "Special Purpose Zone (Mining Exclusion)")
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
   }
-
-  message(paste("Finished downloading metadata for synthesis:", name, sep = " "))
 
   return(metadata)
 
@@ -84,43 +123,29 @@ ga.api.metadata <- function(synthesis_id) {
 
 # Extract Count ----
 ga.api.count <- function(synthesis_id) {
-  ## Initlialize request with page 1 ----
-  page_number = 1
-  response <- GET(paste0("https://gaiastaging.duckdns.org/api/data/SynthesisCountEntry/?sample__synthesis=", synthesis_id, "&page=", page_number),
-                  authenticate("test", "gatesttest"),
-                  # add_headers(Authorization = "Bearer your_access_token"),
-                  content_type("application/json"))
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisCountEntry/?sample__synthesis=", synthesis_id, "&format=feather")
 
-  json_data <- content(response, "text", encoding = "UTF-8")
-  parsed_data <- jsonlite::fromJSON(json_data)
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
 
-  next_page <- length(parsed_data$`next`)
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
 
-  count <- parsed_data$results
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
 
-  message(paste("Connection successful. Downloading count for synthesis:", name, "(Please note this may take a while to run for large syntheses)", sep = " "))
+    # Read the Feather file from the input stream
+    count <- arrow::read_feather(raw_connection) %>%
+      mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
+      left_join(., species_list, by = "subject")
 
-  while (!next_page == 0) {
-    page_number <- page_number + 1 # Increase page number
-
-    # message(page_number)
-
-    new_response <- GET(paste0("https://gaiastaging.duckdns.org/api/data/SynthesisCountEntry/?sample__synthesis=", synthesis_id, "&page=", page_number),
-                        authenticate("test", "gatesttest"),
-                        # add_headers(Authorization = "Bearer your_access_token"),
-                        content_type("application/json"))
-
-    new_json_data <- content(new_response, "text", encoding = "UTF-8")
-    new_parsed_data <- jsonlite::fromJSON(new_json_data)
-
-    new_count <- new_parsed_data$results
-
-    count <- bind_rows(count, new_count)
-
-    next_page <- length(new_parsed_data$`next`)
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
   }
-
-  message(paste("Finished downloading count for synthesis:", name, sep = " "))
 
   return(count)
 
@@ -128,76 +153,31 @@ ga.api.count <- function(synthesis_id) {
 
 # Extract Length ----
 ga.api.length <- function(synthesis_id) {
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisLengthEntry/?sample__synthesis=", synthesis_id, "&format=feather")
 
-  ## Initlialize request with page 1 ----
-  page_number = 1
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
 
-  response <- GET(paste0("https://gaiastaging.duckdns.org/api/data/SynthesisLengthEntry/?sample__synthesis=", synthesis_id,"&page=", page_number),
-                  authenticate("test", "gatesttest"),
-                  # add_headers(Authorization = "Bearer your_access_token"),
-                  content_type("application/json"))
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
 
-  json_data <- content(response, "text", encoding = "UTF-8")
-  parsed_data <- jsonlite::fromJSON(json_data)
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
 
-  next_page <- length(parsed_data$`next`)
+    # Read the Feather file from the input stream
+    length <- arrow::read_feather(raw_connection)%>%
+      mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
+      left_join(., species_list, by = "subject")
 
-  length <- parsed_data$results
-
-  message(paste("Connection successful. Downloading length for synthesis:", name, "(Please note this may take a while to run for large syntheses)", sep = " "))
-
-  while (!next_page == 0) {
-    page_number <- page_number + 1 # Increase page number
-    # message(page_number)
-
-    new_response <- GET(paste0("https://gaiastaging.duckdns.org/api/data/SynthesisLengthEntry/?sample__synthesis=", synthesis_id,"&page=", page_number),
-                        authenticate("test", "gatesttest"),
-                        # add_headers(Authorization = "Bearer your_access_token"),
-                        content_type("application/json"))
-
-    new_json_data <- content(new_response, "text", encoding = "UTF-8")
-    new_parsed_data <- jsonlite::fromJSON(new_json_data)
-
-    new_length <- new_parsed_data$results
-
-    length <- bind_rows(length, new_length)
-
-    next_page <- length(new_parsed_data$`next`)
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
   }
-
-  message(paste("Finished downloading length for synthesis:", name, sep = " "))
 
   return(length)
+
 }
 
-ga.api.species.list <- function(data){
-  # Extract species information ----
-  unique.species <- unique(count$subject)
-
-  species_list <- data.frame()
-
-  message(paste("Connection successful. Downloading species list for synthesis:", name, "(Please note this may take a while to run for large syntheses)", sep = " "))
-
-  for(species in seq(1:length(unique.species))){
-
-    # message(species)
-
-    response <- GET(paste0(unique.species[species]),
-                    authenticate("test", "gatesttest"),
-                    # add_headers(Authorization = "Bearer your_access_token"),
-                    content_type("application/json"))
-
-    json_data <- content(response, "text", encoding = "UTF-8")
-    temp_species <- fromJSON(json_data, preserveNaN = TRUE)
-    species_list <- bind_rows(species_list, temp_species)
-
-  }
-
-  species_list <- species_list %>%
-    dplyr::rename(subject = url) %>%
-    distinct()
-
-  message(paste("Finished downloading species list for synthesis:", name, sep = " "))
-
-  return(species_list)
-}
