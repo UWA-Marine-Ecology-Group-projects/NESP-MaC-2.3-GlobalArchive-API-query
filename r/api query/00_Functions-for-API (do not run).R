@@ -33,91 +33,6 @@ marineparks$ZONE_TYPE <- str_replace_all(marineparks$ZONE_TYPE, c("[()]" = "",
                                                                   "Mining Exclusion" = "(Mining Exclusion)"
                                                                   ))
 
-# Extract Metadata ----
-ga.api.metadata <- function(synthesis_id) {
-
-  # URL
-  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=", synthesis_id, "&format=feather")
-
-  # Send GET request with basic authentication
-  response <- GET(url, authenticate(username, password))
-
-  # Check if the request was successful
-  if (status_code(response) == 200) {
-    # Get the raw content
-    raw_content <- content(response, "raw")
-
-    # Create an in-memory file-like object from raw content
-    raw_connection <- rawConnection(raw_content, "rb")
-
-    # Read the Feather file from the input stream
-    metadata <- arrow::read_feather(raw_connection)
-
-  } else {
-    # Request was not successful
-    cat("Request failed with status code:", status_code(response))
-  }
-
-  return(metadata)
-
-}
-
-# Extract Count ----
-ga.api.count <- function(synthesis_id) {
-  # URL
-  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisCountEntry/?sample__synthesis=", synthesis_id, "&format=feather")
-
-  # Send GET request with basic authentication
-  response <- GET(url, authenticate(username, password))
-
-  # Check if the request was successful
-  if (status_code(response) == 200) {
-    # Get the raw content
-    raw_content <- content(response, "raw")
-
-    # Create an in-memory file-like object from raw content
-    raw_connection <- rawConnection(raw_content, "rb")
-
-    # Read the Feather file from the input stream
-    count <- arrow::read_feather(raw_connection)
-
-  } else {
-    # Request was not successful
-    cat("Request failed with status code:", status_code(response))
-  }
-
-  return(count)
-
-}
-
-# Extract Length ----
-ga.api.length <- function(synthesis_id) {
-  # URL
-  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisLengthEntry/?sample__synthesis=", synthesis_id, "&format=feather")
-
-  # Send GET request with basic authentication
-  response <- GET(url, authenticate(username, password))
-
-  # Check if the request was successful
-  if (status_code(response) == 200) {
-    # Get the raw content
-    raw_content <- content(response, "raw")
-
-    # Create an in-memory file-like object from raw content
-    raw_connection <- rawConnection(raw_content, "rb")
-
-    # Read the Feather file from the input stream
-    length <- arrow::read_feather(raw_connection)
-
-  } else {
-    # Request was not successful
-    cat("Request failed with status code:", status_code(response))
-  }
-
-  return(length)
-
-}
-
 # Get species list ----
 ga.api.species.list <- function() {
   # URL
@@ -145,3 +60,101 @@ ga.api.species.list <- function() {
   return(species_list)
 
 }
+
+# API call for Species Information ----
+species_list <- ga.api.species.list() %>%
+  dplyr::rename(subject = url)
+
+
+# Extract Metadata ----
+ga.api.metadata <- function(synthesis_id) {
+
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisSample/?synthesis=", synthesis_id, "&format=feather")
+
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
+
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
+
+    # Read the Feather file from the input stream
+    metadata <- arrow::read_feather(raw_connection) %>%
+      dplyr::mutate(coordinates = str_replace_all(.$coordinates, c("SRID=4326;POINT " = "", "[()]" = ""))) %>%
+      tidyr::separate(coordinates, into = c("longitude", "latitude"), sep = " ") %>%
+      dplyr::mutate(latitude = as.numeric(latitude), longitude = as.numeric(longitude))
+
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
+  }
+
+  return(metadata)
+
+}
+
+# Extract Count ----
+ga.api.count <- function(synthesis_id) {
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisCountEntry/?sample__synthesis=", synthesis_id, "&format=feather")
+
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
+
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
+
+    # Read the Feather file from the input stream
+    count <- arrow::read_feather(raw_connection) %>%
+      mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
+      left_join(., species_list, by = "subject")
+
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
+  }
+
+  return(count)
+
+}
+
+# Extract Length ----
+ga.api.length <- function(synthesis_id) {
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisLengthEntry/?sample__synthesis=", synthesis_id, "&format=feather")
+
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
+
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
+
+    # Read the Feather file from the input stream
+    length <- arrow::read_feather(raw_connection)%>%
+      mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
+      left_join(., species_list, by = "subject")
+
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
+  }
+
+  return(length)
+
+}
+
