@@ -29,31 +29,7 @@ for(row.num in 1:nrow(syntheses)){
   synthesis_id <- syntheses$id[row.num]
 
   # API call for Metadata ----
-  metadata_raw <- ga.api.metadata(synthesis_id) %>%
-    dplyr::mutate(sample = url) %>%
-    dplyr::select(-c(status))
-
-  # Add marine parks to metadata ----
-  metadata_spatial <- metadata_raw
-
-  # Add spatial
-  coordinates(metadata_spatial) <- c('longitude', 'latitude')
-  proj4string(metadata_spatial) <- CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
-
-  # Add in marine spatial zoning information ----
-  metadata <- bind_cols(metadata_raw, over(metadata_spatial, marineparks)) %>%
-    dplyr::rename(zone = ZONE_TYPE) %>%
-    tidyr::replace_na(list(status = "Fished"))
-
-  metadata$zone <- fct_relevel(metadata$zone,
-                               "National Park Zone",
-                               "Sanctuary Zone",
-                               "General Use",
-                               "General Use Zone",
-                               "Habitat Protection Zone",
-                               "Multiple Use Zone",
-                               "Recreational Use Zone",
-                               "Special Purpose Zone (Mining Exclusion)")
+  metadata_raw <- ga.api.metadata(synthesis_id)
 
   # API call for Count ----
   count <- ga.api.count(synthesis_id)
@@ -92,5 +68,4 @@ for(row.num in 1:nrow(syntheses)){
   saveRDS(count, paste0("output/", name, "_count.RDS"))
   saveRDS(length, paste0("output/", name, "_length.RDS"))
   saveRDS(length_combined, paste0("output/", name, "_length-class.RDS"))
-
 }
