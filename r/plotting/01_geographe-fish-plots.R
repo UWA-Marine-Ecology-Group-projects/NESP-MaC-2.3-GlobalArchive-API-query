@@ -97,7 +97,7 @@ geo.length <- bind_rows(`0-50`, `50-100`,
 # Boxplot for size of maturity - Geographe Bay Synthesis
 # Greater than and less than size of 50% maturity
 # All species
-plot_size_of_maturity <- function(data, size.classes, scientific.names, tidy.name) {
+plot_size_of_maturity <- function(data, size.classes, scientific.names) {
   # data = Dataframe
   # Vector of size classes
   # Vector of scientific to include
@@ -107,12 +107,10 @@ plot_size_of_maturity <- function(data, size.classes, scientific.names, tidy.nam
          aes(x = size.class, y = number)) +
     geom_boxplot(outlier.shape = NA) +
     geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
-    labs(x = tidy.name, y = "Abundance") +
+    labs(x = "All indicator species (size of maturity)", y = "Abundance") +
     theme_classic()
 
 }
-
-plot_size_of_maturity(geo.length, c(">Lm", "<Lm"), "all.indicators", )
 
 ggplot(data = geo.length %>%
          dplyr::filter(size.class %in% c(">Lm", "<Lm") &
