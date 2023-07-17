@@ -18,6 +18,10 @@ syntheses <- data.frame(name = c("Geographe-bay", "Ningaloo"),
 syntheses <- data.frame(name = c("Geographe-bay"), #, "Ningaloo"
                         id   = c(14))              #,  15
 
+
+# API call for Species Information ----
+species_list <- ga.api.species.list(count)
+
 # Loop through syntheses----
 for(row.num in 1:nrow(syntheses)){
 
@@ -45,15 +49,15 @@ for(row.num in 1:nrow(syntheses)){
     dplyr::rename(zone = ZONE_TYPE) %>%
     tidyr::replace_na(list(status = "Fished"))
 
-  # metadata$zone <- fct_relevel(metadata$zone,
-  #                              "National Park Zone",
-  #                              "Sanctuary Zone",
-  #                              "General Use",
-  #                              "General Use Zone",
-  #                              "Habitat Protection Zone",
-  #                              "Multiple Use Zone",
-  #                              "Recreational Use Zone",
-  #                              "Special Purpose Zone (Mining Exclusion)")
+  metadata$zone <- fct_relevel(metadata$zone,
+                               "National Park Zone",
+                               "Sanctuary Zone",
+                               "General Use",
+                               "General Use Zone",
+                               "Habitat Protection Zone",
+                               "Multiple Use Zone",
+                               "Recreational Use Zone",
+                               "Special Purpose Zone (Mining Exclusion)")
 
   # API call for Count ----
   count <- ga.api.count(synthesis_id)
@@ -61,109 +65,46 @@ for(row.num in 1:nrow(syntheses)){
   # API call for Length ----
   length <- ga.api.length(synthesis_id)
 
-  # API call for Species Information ----
-  species_list <- ga.api.species.list(count)
 
-  # Add species information to count and length files ----
-  count_with_species <- count %>%
-    mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
-    left_join(., species_list, by = "subject")
-
-  length_with_species <- length %>%
-    mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
-    left_join(., species_list, by = "subject")
-
-  # Create abundance by size class ----
-  length_class <- length_with_species %>%
-    dplyr::mutate(fb_length_at_maturity_mm = fb_length_at_maturity_cm*10) %>%
-    dplyr::select(sample, length, number, range, rms, precision, subject_common_name, family, genus, species, fb_length_at_maturity_mm) %>%
-    dplyr::mutate(class = case_when(length > fb_length_at_maturity_mm ~ "100% +", length < fb_length_at_maturity_mm ~ "< 100%")) %>%
-    dplyr::group_by(sample, family, genus, species, class) %>%
-    dplyr::summarise(count = sum(number)) %>%
-    dplyr::ungroup() %>%
-    dplyr::full_join(metadata) %>%
-    tidyr::complete(sample, nesting(family, genus, species), class) %>%
-    tidyr::replace_na(list(count = 0)) %>%
-    dplyr::mutate(scientific = paste(genus, species, sep = " ")) %>%
-    dplyr::filter(scientific %in% indicator_species) %>%
-    dplyr::filter(!is.na(class)) %>%
-    dplyr::select(sample, family, genus, species, class, count, scientific) %>%
-    dplyr::left_join(., metadata, by = "sample")
-
-  length_sum <- length_class %>%
-    dplyr::group_by(sample, class) %>%
-    dplyr::summarise(count = sum(count)) %>%
-    ungroup() %>%
-    dplyr::mutate(scientific = "All indicator species") %>%
-    dplyr::left_join(., metadata, by = "sample")
-
-  length_combined <- bind_rows(length_sum, length_class)
+  # # Add species information to count and length files ----
+  # count_with_species <- count %>%
+  #   mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
+  #   left_join(., species_list, by = "subject")
+  #
+  # length_with_species <- length %>%
+  #   mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
+  #   left_join(., species_list, by = "subject")
+  #
+  # # Create abundance by size class ----
+  # length_class <- length_with_species %>%
+  #   dplyr::mutate(fb_length_at_maturity_mm = fb_length_at_maturity_cm*10) %>%
+  #   dplyr::select(sample, length, number, range, rms, precision, subject_common_name, family, genus, species, fb_length_at_maturity_mm) %>%
+  #   dplyr::mutate(class = case_when(length > fb_length_at_maturity_mm ~ "100% +", length < fb_length_at_maturity_mm ~ "< 100%")) %>%
+  #   dplyr::group_by(sample, family, genus, species, class) %>%
+  #   dplyr::summarise(count = sum(number)) %>%
+  #   dplyr::ungroup() %>%
+  #   dplyr::full_join(metadata) %>%
+  #   tidyr::complete(sample, nesting(family, genus, species), class) %>%
+  #   tidyr::replace_na(list(count = 0)) %>%
+  #   dplyr::mutate(scientific = paste(genus, species, sep = " ")) %>%
+  #   dplyr::filter(scientific %in% indicator_species) %>%
+  #   dplyr::filter(!is.na(class)) %>%
+  #   dplyr::select(sample, family, genus, species, class, count, scientific) %>%
+  #   dplyr::left_join(., metadata, by = "sample")
+  #
+  # length_sum <- length_class %>%
+  #   dplyr::group_by(sample, class) %>%
+  #   dplyr::summarise(count = sum(count)) %>%
+  #   ungroup() %>%
+  #   dplyr::mutate(scientific = "All indicator species") %>%
+  #   dplyr::left_join(., metadata, by = "sample")
+  #
+  # length_combined <- bind_rows(length_sum, length_class)
 
   # Save raw data (if needed) ----
   saveRDS(metadata, paste0("output/", name, "_metadata.RDS"))
-  saveRDS(count_with_species, paste0("output/", name, "_count.RDS"))
-  saveRDS(length_with_species, paste0("output/", name, "_length.RDS"))
-  saveRDS(length_combined, paste0("output/", name, "_length-class.RDS"))
+  # saveRDS(count_with_species, paste0("output/", name, "_count.RDS"))
+  # saveRDS(length_with_species, paste0("output/", name, "_length.RDS"))
+  # saveRDS(length_combined, paste0("output/", name, "_length-class.RDS"))
 
-}
-
-# BROOKE
-# API endpoint URL
-url <- "https://gaiastaging.duckdns.org/api/data/GlobalArchiveAustralianFishList/?format=feather"
-print(url)
-# Username and password for basic authentication
-username <- "test"
-password <- "gatesttest"
-
-# Send GET request with basic authentication
-response <- GET(url, authenticate(username, password))
-print(response$url)
-
-# Check if the request was successful
-if (status_code(response) == 200) {
-  # Get the raw content
-  raw_content <- content(response, "raw")
-
-  # Create an in-memory file-like object from raw content
-  raw_connection <- rawConnection(raw_content, "rb")
-
-  # Read the Feather file from the input stream
-  table <- arrow::read_feather(raw_connection)
-
-  # Display the table
-  print(table)
-} else {
-  # Request was not successful
-  cat("Request failed with status code:", status_code(response))
-}
-
-
-
-# Testing habitat
-
-url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisBenthosEntry/?synthesis=15&format=feather")
-# Username and password for basic authentication
-username <- "test"
-password <- "gatesttest"
-
-# Send GET request with basic authentication
-response <- GET(url, authenticate(username, password))
-print(response$url)
-
-# Check if the request was successful
-if (status_code(response) == 200) {
-  # Get the raw content
-  raw_content <- content(response, "raw")
-
-  # Create an in-memory file-like object from raw content
-  raw_connection <- rawConnection(raw_content, "rb")
-
-  # Read the Feather file from the input stream
-  table <- arrow::read_feather(raw_connection)
-
-  # Display the table
-  print(table)
-} else {
-  # Request was not successful
-  cat("Request failed with status code:", status_code(response))
 }
