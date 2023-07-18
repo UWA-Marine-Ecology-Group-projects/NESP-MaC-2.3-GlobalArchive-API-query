@@ -19,6 +19,7 @@ synthesis <- "Ningaloo"
 
 # Load the data
 metadata <- readRDS(paste0("output/", synthesis, "_metadata.RDS")) %>%
+  dplyr::mutate(year = )
   dplyr::select(sample, longitude, latitude) %>%
   glimpse()
 
