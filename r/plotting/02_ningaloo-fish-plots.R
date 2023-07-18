@@ -1,6 +1,6 @@
 ###
 # Project: API query
-# Data:    Geographe Habitat & Fish Syntheses
+# Data:    Ningaloo Habitat & Fish Syntheses
 # Task:    Visualise Lm & CTI data as boxplots
 # Author:  Claude Spencer
 # Date:    July 2023
@@ -15,14 +15,14 @@ library(scatterpie)
 library(arrow)
 
 # Set synthesis
-synthesis <- "Geographe-bay"
+synthesis <- "Ningaloo"
 
 # Load the data
 metadata <- readRDS(paste0("output/", synthesis, "_metadata.RDS")) %>%
   dplyr::select(sample, longitude, latitude) %>%
   glimpse()
 
-length.raw <- readRDS(paste0("output/", synthesis, "_length.RDS")) %>%
+length.raw <- readRDS("output/Ningaloo_length.RDS") %>%
   dplyr::mutate(fb_length_at_maturity = fb_length_at_maturity_cm * 10,
                 scientific = paste(genus, species, sep = " ")) %>%
   left_join(metadata) %>%
@@ -41,9 +41,9 @@ write.csv(cti, paste0("data/tidy/", synthesis,"_cti.csv"),
 
 length.indicators <- length.raw %>%
   dplyr::select(sample, length, number, scientific, fb_length_at_maturity) %>%
-  dplyr::filter(scientific %in% c("Choerodon rubescens",
+  dplyr::filter(scientific %in% c("Lethrinus nebulosus",
                                   "Chrysophrys auratus",
-                                  "Glaucosoma hebraicum")) %>%
+                                  "Pristipomoides multidens")) %>%
   dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
   glimpse()
 
@@ -53,9 +53,9 @@ metadata.length <- length.raw %>%
 
 species <- length.raw %>%
   dplyr::select(sample, scientific, fb_length_at_maturity) %>%
-  dplyr::filter(scientific %in% c("Choerodon rubescens",
+  dplyr::filter(scientific %in% c("Lethrinus nebulosus",
                                   "Chrysophrys auratus",
-                                  "Glaucosoma hebraicum")) %>%
+                                  "Pristipomoides multidens")) %>%
   dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
   right_join(metadata.length) %>%
   complete(sample, nesting(scientific, fb_length_at_maturity)) %>%
@@ -98,9 +98,9 @@ sizeclass_by_abundance(length.indicators, metadata.length, species, 0, 1.0, "<Lm
 sizeclass_by_abundance(length.indicators, metadata.length, species, 1.0, Inf, ">Lm")
 
 length <- bind_rows(`0-50`, `50-100`,
-                    `100-125`, `125-150`,
-                    `>150`, `<Lm`,
-                    `>Lm`) %>%
+                        `100-125`, `125-150`,
+                        `>150`, `<Lm`,
+                        `>Lm`) %>%
   dplyr::mutate(size.class = factor(size.class,
                                     levels = c("0-50","50-100","100-125",
                                                "125-150","150+",">Lm", "<Lm"))) %>%
@@ -116,8 +116,8 @@ plot_size_of_maturity <- function(dat, plot.types, scientific.names, tidy.name) 
   # Vector of responses to include
   if (plot.types == 1) {size.classes = c(">Lm", "<Lm")}
   if (plot.types == 2) {size.classes = c("0-50", "50-100",
-                                         "100-125", "125-150",
-                                         "150+")}
+                                        "100-125", "125-150",
+                                        "150+")}
   ggplot(data = dat %>%
            dplyr::filter(size.class %in% size.classes &
                            scientific %in% scientific.names),
@@ -148,20 +148,20 @@ plot_size_of_maturity(length, plot.types = 2,
                       tidy.name = "All indicator species")
 
 plot_size_of_maturity(length, plot.types = 1,
-                      scientific.names = "Glaucosoma hebraicum",
-                      tidy.name = "Glaucosoma hebraicum")
+                      scientific.names = "Pristipomoides multidens",
+                      tidy.name = "Pristipomoides multidens")
 
 plot_size_of_maturity(length, plot.types = 2,
-                      scientific.names = "Glaucosoma hebraicum",
-                      tidy.name = "Glaucosoma hebraicum")
+                      scientific.names = "Pristipomoides multidens",
+                      tidy.name = "Pristipomoides multidens")
 
 plot_size_of_maturity(length, plot.types = 1,
-                      scientific.names = "Choerodon rubescens",
-                      tidy.name = "Choerodon rubescens")
+                      scientific.names = "Lethrinus nebulosus",
+                      tidy.name = "Lethrinus nebulosus")
 
 plot_size_of_maturity(length, plot.types = 2,
-                      scientific.names = "Choerodon rubescens",
-                      tidy.name = "Choerodon rubescens")
+                      scientific.names = "Lethrinus nebulosus",
+                      tidy.name = "Lethrinus nebulosus")
 
 plot_size_of_maturity(length, plot.types = 1,
                       scientific.names = "Chrysophrys auratus",
