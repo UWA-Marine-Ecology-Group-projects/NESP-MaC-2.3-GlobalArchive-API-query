@@ -12,6 +12,7 @@ rm(list = ls())
 # Load libraries
 library(tidyverse)
 library(scatterpie)
+library(arrow)
 
 # Load the data
 metadata <- readRDS("output/Geographe-bay_metadata.RDS") %>%
@@ -23,9 +24,17 @@ geo <- readRDS("output/Geographe-bay_length.RDS") %>%
                 scientific = paste(genus, species, sep = " ")) %>%
   left_join(metadata) %>%
   dplyr::select(sample, length, number, scientific,
-                fb_length_at_maturity, subject_list_type,
+                fb_length_at_maturity,
                 rls_thermal_niche) %>%
   glimpse()
+
+cti <- geo %>%
+  dplyr::select(sample, scientific, rls_thermal_niche) %>%
+  dplyr::filter(!is.na(rls_thermal_niche)) %>%
+  glimpse()
+
+write.csv(cti, "data/tidy/geographe/geographe_cti.csv",
+          row.names = F)
 
 geo.indicators <- geo %>%
   dplyr::select(sample, length, number, scientific, fb_length_at_maturity) %>%
@@ -94,281 +103,81 @@ geo.length <- bind_rows(`0-50`, `50-100`,
                                                "125-150","150+",">Lm", "<Lm"))) %>%
   glimpse()
 
+write.csv(geo.length, file = "data/tidy/geographe/geographe_size-of-maturity.csv",
+          row.names = F)
+
 # Boxplot for size of maturity - Geographe Bay Synthesis
 # Greater than and less than size of 50% maturity
 # All species
-plot_size_of_maturity <- function(data, size.classes, scientific.names) {
+plot_size_of_maturity <- function(dat, plot.types, scientific.names, tidy.name) {
   # data = Dataframe
   # Vector of size classes
-  # Vector of scientific to include
-  temp.plot <- ggplot(data = data %>%
+  # Vector of responses to include
+  if (plot.types == 1) {size.classes = c(">Lm", "<Lm")}
+  if (plot.types == 2) {size.classes = c("0-50", "50-100",
+                                        "100-125", "125-150",
+                                        "150+")}
+  ggplot(data = dat %>%
            dplyr::filter(size.class %in% size.classes &
                            scientific %in% scientific.names),
          aes(x = size.class, y = number)) +
     geom_boxplot(outlier.shape = NA) +
     geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
-    labs(x = "All indicator species (size of maturity)", y = "Abundance") +
+    labs(x = tidy.name, y = "Abundance") +
     theme_classic()
 
+  if (plot.types == 1) {
+    ggsave(filename = paste0("plots/", paste("length.maturity", scientific.names,
+                                             "boxplot.png", sep = "_")),
+           plot = last_plot(), width = 8, height = 6, units = "in", dpi = 300)
+  }
+  if (plot.types == 2) {
+    ggsave(filename = paste0("plots/", paste("maturity.bins", scientific.names,
+                                             "boxplot.png", sep = "_")),
+           plot = last_plot(), width = 8, height = 6, units = "in", dpi = 300)
+  }
 }
 
-ggplot(data = geo.length %>%
-         dplyr::filter(size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "all.indicators"),
-       aes(x = size.class, y = number)) +
+plot_size_of_maturity(geo.length, plot.types =  1,
+                      scientific.names = "all.indicators",
+                      tidy.name = "All indicator species")
+
+plot_size_of_maturity(geo.length, plot.types = 2,
+                      scientific.names = "all.indicators",
+                      tidy.name = "All indicator species")
+
+plot_size_of_maturity(geo.length, plot.types = 1,
+                      scientific.names = "Choerodon rubescens",
+                      tidy.name = "Choerodon rubescens")
+
+plot_size_of_maturity(geo.length, plot.types = 2,
+                      scientific.names = "Choerodon rubescens",
+                      tidy.name = "Choerodon rubescens")
+
+plot_size_of_maturity(geo.length, plot.types = 1,
+                      scientific.names = "Glaucosoma hebraicum",
+                      tidy.name = "Glaucosoma hebraicum")
+
+plot_size_of_maturity(geo.length, plot.types = 2,
+                      scientific.names = "Glaucosoma hebraicum",
+                      tidy.name = "Glaucosoma hebraicum")
+
+plot_size_of_maturity(geo.length, plot.types = 1,
+                      scientific.names = "Chrysophrys auratus",
+                      tidy.name = "Chrysophrys auratus")
+
+plot_size_of_maturity(geo.length, plot.types = 2,
+                      scientific.names = "Chrysophrys auratus",
+                      tidy.name = "Chrysophrys auratus")
+
+ggplot(data = geo %>% dplyr::mutate(title = "Community Thermal Index"),
+       aes(x = title, y = rls_thermal_niche)) +
   geom_boxplot(outlier.shape = NA) +
   geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
+  labs(x = NULL, y = "Community Thermal Index (CTI)") +
   theme_classic()
 
-ggplot(data = geo.length %>%
-         dplyr::filter(!size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "all.indicators"),
-       aes(x = size.class, y = number)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.1, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
-  theme_classic()
+ggsave(filename = paste0("plots/", paste("geographe","community-thermal-index",
+                                         "boxplot.png", sep = "_")),
+       plot = last_plot(), width = 8, height = 6, units = "in", dpi = 300)
 
-# Each species
-# Baldie
-ggplot(data = geo.length %>%
-         dplyr::filter(size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "Choerodon rubescens"),
-       aes(x = size.class, y = number)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
-  theme_classic()
-
-ggplot(data = geo.length %>%
-         dplyr::filter(!size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "Choerodon rubescens"),
-       aes(x = size.class, y = number)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.1, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
-  theme_classic()
-
-# Dhuey
-ggplot(data = geo.length %>%
-         dplyr::filter(size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "Glaucosoma hebraicum"),
-       aes(x = size.class, y = number)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
-  theme_classic()
-
-ggplot(data = geo.length %>%
-         dplyr::filter(!size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "Glaucosoma hebraicum"),
-       aes(x = size.class, y = number)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.1, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
-  theme_classic()
-
-# Pinkie
-ggplot(data = geo.length %>%
-         dplyr::filter(size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "Chrysophrys auratus"),
-       aes(x = size.class, y = number)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
-  theme_classic()
-
-ggplot(data = geo.length %>%
-         dplyr::filter(!size.class %in% c(">Lm", "<Lm") &
-                         scientific %in% "Chrysophrys auratus"),
-       aes(x = size.class, y = number)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.1, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "All indicator species (size of maturity)", y = "Abundance") +
-  # scale_y_continuous(limits = c(0, 6)) +
-  theme_classic()
-
-# Boxplot for CTI - Geographe Bay Synthesis (all species)
-ggplot(data = geo, aes(x = subject_list_type, y = rls_thermal_niche)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_point(alpha = 0.05, position = position_jitter(w = 0.1, h = 0)) +
-  labs(x = "Community Thermal Index", y = "Abundance") +
-  theme_classic() +
-  theme(axis.text.x = element_blank())
-
-
-# fifty <- geo.indicators %>%
-#   dplyr::filter(length < (fb_length_at_maturity/2)) %>%
-#   dplyr::group_by(sample, scientific) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "0-50") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# fifty.all <- geo.indicators %>%
-#   dplyr::filter(length < (fb_length_at_maturity/2)) %>%
-#   dplyr::group_by(sample) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "0-50",
-#                 scientific = "all.indicators") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# fifty <- bind_rows(fifty.all, fifty) %>%
-#   glimpse()
-#
-# fiftyhunnit <- geo.indicators %>%
-#   dplyr::filter(length > (fb_length_at_maturity/2) & length < (fb_length_at_maturity)) %>%
-#   dplyr::group_by(sample, scientific) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "50-100") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# fiftyhunnit.all <- geo.indicators %>%
-#   dplyr::filter(length > (fb_length_at_maturity/2) & length < (fb_length_at_maturity)) %>%
-#   dplyr::group_by(sample) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "50-100",
-#                 scientific = "all.indicators") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# fiftyhunnit <- bind_rows(fiftyhunnit.all, fiftyhunnit) %>%
-#   glimpse()
-#
-# hunnit <- geo.indicators %>%
-#   dplyr::filter(length > (fb_length_at_maturity/2) & length < (fb_length_at_maturity*1.25)) %>%
-#   dplyr::group_by(sample, scientific) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "100-125") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# hunnit.all <- geo.indicators %>%
-#   dplyr::filter(length > (fb_length_at_maturity/2) & length < (fb_length_at_maturity*1.25)) %>%
-#   dplyr::group_by(sample) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "100-125",
-#                 scientific = "all.indicators") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# hunnit <- bind_rows(hunnit, hunnit.all) %>%
-#   glimpse()
-#
-# onetwofive <- geo.indicators %>%
-#   dplyr::filter(length > (fb_length_at_maturity*1.25) & length < (fb_length_at_maturity*1.5)) %>%
-#   dplyr::group_by(sample, scientific) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "125-150") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# onetwofive.all <- geo.indicators %>%
-#   dplyr::filter(length > (fb_length_at_maturity*1.25) & length < (fb_length_at_maturity*1.5)) %>%
-#   dplyr::group_by(sample) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "125-150",
-#                 scientific = "all.indicators") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# onetwofive <- bind_rows(onetwofive, onetwofive.all) %>%
-#   glimpse()
-#
-# onefiftyplus <- geo.indicators %>%
-#   dplyr::filter(length < (fb_length_at_maturity *1.5)) %>%
-#   dplyr::group_by(sample, scientific) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "150+") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# onefiftyplus.all <- geo.indicators %>%
-#   dplyr::filter(length < (fb_length_at_maturity *1.5)) %>%
-#   dplyr::group_by(sample) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "150+",
-#                 scientific = "all.indicators") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# onefiftyplus <- bind_rows(onefiftyplus, onefiftyplus.all) %>%
-#   glimpse()
-#
-# greater.mat <- geo.indicators %>%
-#   dplyr::filter(length > fb_length_at_maturity) %>%
-#   dplyr::group_by(sample, scientific) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = ">Lm") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# greater.mat.all <- geo.indicators %>%
-#   dplyr::filter(length > fb_length_at_maturity) %>%
-#   dplyr::group_by(sample) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = ">Lm",
-#                 scientific = "all.indicators") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# greater.mat <- bind_rows(greater.mat, greater.mat.all) %>%
-#   glimpse()
-#
-# smaller.mat <- geo.indicators %>%
-#   dplyr::filter(length < fb_length_at_maturity) %>%
-#   dplyr::group_by(sample, scientific) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "<Lm") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# smaller.mat.all <- geo.indicators %>%
-#   dplyr::filter(length < fb_length_at_maturity) %>%
-#   dplyr::group_by(sample) %>%
-#   dplyr::summarise(number = sum(number)) %>%
-#   right_join(metadata.length) %>%
-#   dplyr::mutate(number = ifelse(is.na(number), 0, number)) %>%
-#   dplyr::mutate(size.class = "<Lm",
-#                 scientific = "all.indicators") %>%
-#   ungroup() %>%
-#   dplyr::glimpse()
-#
-# smaller.mat <- bind_rows(smaller.mat, smaller.mat.all) %>%
-#   glimpse()
