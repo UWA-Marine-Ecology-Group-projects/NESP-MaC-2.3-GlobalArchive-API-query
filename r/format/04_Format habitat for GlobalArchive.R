@@ -117,6 +117,44 @@ write.csv(height.metadata, "data/syntheses/habitat height/2022-05_PtCloates_ster
 
 
 
+# Geographe bay -----
+geo <- read_delim("data/raw/geographe/2014-12_Geographe.Bay_Habitat.point.score.txt") %>%
+  ga.clean.names() %>%
+  dplyr::select(opcode, biota.consolidated, biota.macroalgae, biota.seagrasses, biota.stony.corals, biota.unconsolidated) %>%
+  pivot_longer(!opcode, names_to = "level_2", values_to = "count") %>%
+  dplyr::mutate(level_2 = str_replace_all(.$level_2, c("biota." = ""))) %>%
+  dplyr::mutate(level_2 = ga.capitalise(level_2)) %>%
+  dplyr::mutate(level_3 = case_when(
+    level_2 %in% "Consolidated" ~ "Consolidated (hard)",
+    level_2 %in% "Unconsolidated" ~ "Unconsolidated (soft)",
+    level_2 %in% "Stony.corals" ~ "Corals"
+  )) %>%
+  dplyr::mutate(level_2 = str_replace_all(.$level_2, c("Consolidated" = "Substrate",
+                                                       "Unconsolidated" = "Substrate",
+                                                       "Stony.corals" = "Cnidaria"))) %>%
+  dplyr::mutate(level_4 = case_when(level_2 %in% "Cnidaria" ~ "Stony corals")) %>%
+  dplyr::filter(count > 0) %>%
+  dplyr::select(opcode, count, level_2, level_3, level_4) %>%
+  dplyr::mutate(level_5 = NA, level_6 = NA, level_7 = NA, level_8 = NA, family = NA, genus = NA, species = NA) %>%
+  left_join(levels) %>%
+  dplyr::rename(sample = opcode,
+                caab_code = code) %>%
+  dplyr::mutate(campaignid = "2014-12_Geographe.Bay_stereoBRUVs")
+
+write_csv(geo, "data/syntheses/geographe/2014-12_Geographe.Bay_stereoBRUVs_habitat.csv")
+
+# "Consolidated"   OK
+# "Macroalgae"     OK
+# "Seagrasses"     OK
+# "Stony.corals"   OK
+# "Unconsolidated" OK
+
+names(geo)
+unique(geo$level_2)
+
+unique(levels$level_2)
+
+
 
 
 

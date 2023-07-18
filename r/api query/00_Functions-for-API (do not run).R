@@ -66,6 +66,39 @@ species_list <- ga.api.species.list() %>%
   dplyr::rename(subject = url)
 
 
+# Get habitat list ----
+ga.api.habitat.list <- function() {
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/GlobalArchiveBenthicList/?format=feather")
+
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
+
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
+
+    # Read the Feather file from the input stream
+    species_list <- arrow::read_feather(raw_connection)
+
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
+  }
+
+  return(species_list)
+
+}
+
+# API call for Species Information ----
+habitat_list <- ga.api.habitat.list() %>%
+  dplyr::rename(subject = url)
+
+
 # Extract Metadata ----
 ga.api.metadata <- function(synthesis_id) {
 
@@ -178,6 +211,66 @@ ga.api.length <- function(synthesis_id) {
   }
 
   return(length)
+
+}
+
+# Extract Habitat ----
+ga.api.habitat <- function(synthesis_id) {
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisBenthosEntry/?sample__synthesis=", synthesis_id, "&format=feather")
+
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
+
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
+
+    # Read the Feather file from the input stream
+    habitat <- arrow::read_feather(raw_connection) %>%
+      mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveBenthicList")) %>%
+      left_join(., habitat_list, by = "subject")
+
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
+  }
+
+  return(habitat)
+
+}
+
+# Extract Habitat Length ----
+ga.api.habitat.length <- function(synthesis_id) {
+  # URL
+  url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisBenthosLengthEntry/?sample__synthesis=", synthesis_id, "&format=feather")
+
+  # Send GET request with basic authentication
+  response <- GET(url, authenticate(username, password))
+
+  # Check if the request was successful
+  if (status_code(response) == 200) {
+    # Get the raw content
+    raw_content <- content(response, "raw")
+
+    # Create an in-memory file-like object from raw content
+    raw_connection <- rawConnection(raw_content, "rb")
+
+    # Read the Feather file from the input stream
+    habitat_length <- arrow::read_feather(raw_connection) %>%
+      mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveBenthicList")) %>%
+      left_join(., habitat_list, by = "subject")
+
+  } else {
+    # Request was not successful
+    cat("Request failed with status code:", status_code(response))
+  }
+
+  return(habitat_length)
 
 }
 

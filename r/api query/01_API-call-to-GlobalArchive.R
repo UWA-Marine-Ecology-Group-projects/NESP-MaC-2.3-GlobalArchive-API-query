@@ -18,8 +18,8 @@ library(sf)
 source("r/api query/00_Functions-for-API (do not run).R")
 
 # Add Synthesis ID from web version ----
-syntheses <- data.frame(name = c("Geographe-bay", "Ningaloo"),
-                        id   = c(14,  15))
+syntheses <- data.frame(name = c("Geographe-bay", "Ningaloo", "Ningaloo benthic"),
+                        id   = c(14,  15, 17))
 
 # Loop through syntheses----
 for(row.num in 1:nrow(syntheses)){
@@ -29,15 +29,25 @@ for(row.num in 1:nrow(syntheses)){
   synthesis_id <- syntheses$id[row.num]
 
   # API call for Metadata ----
-  metadata_raw <- ga.api.metadata(synthesis_id)
+  metadata <- ga.api.metadata(synthesis_id)
+
+  # Save raw data (if needed) ----
+  saveRDS(metadata, paste0("output/", name, "_metadata.RDS"))
 
   # API call for Count ----
   count <- ga.api.count(synthesis_id)
 
+  if(nrow(count) > 0){
+    saveRDS(count, paste0("output/", name, "_count.RDS"))}
+
   # API call for Length ----
   length <- ga.api.length(synthesis_id)
 
+  if(nrow(length) > 0){
+    saveRDS(length, paste0("output/", name, "_length.RDS"))}
+
   # Create abundance by size class ----
+  if(nrow(length) > 0){
   length_class <- length %>%
     dplyr::mutate(fb_length_at_maturity_mm = fb_length_at_maturity_cm*10) %>%
     dplyr::select(sample, length, number, range, rms, precision, subject_common_name, family, genus, species, fb_length_at_maturity_mm) %>%
@@ -63,9 +73,19 @@ for(row.num in 1:nrow(syntheses)){
 
   length_combined <- bind_rows(length_sum, length_class)
 
-  # Save raw data (if needed) ----
-  saveRDS(metadata, paste0("output/", name, "_metadata.RDS"))
-  saveRDS(count, paste0("output/", name, "_count.RDS"))
-  saveRDS(length, paste0("output/", name, "_length.RDS"))
-  saveRDS(length_combined, paste0("output/", name, "_length-class.RDS"))
+  if(nrow(length_combined) > 0){
+    saveRDS(length_combined, paste0("output/", name, "_length-class.RDS"))}
+  }
+
+  # API call for habitat ----
+  habitat <- ga.api.habitat(synthesis_id)
+
+  if(nrow(habitat) > 0){
+    saveRDS(habitat, paste0("output/", name, "_habitat.RDS"))}
+
+  # API call for Habitat Length ----
+  habitat_length <- ga.api.habitat.length(synthesis_id)
+
+  if(nrow(habitat_length) > 0){
+    saveRDS(habitat_length, paste0("output/", name, "_habitat-length.RDS"))}
 }
