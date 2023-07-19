@@ -19,14 +19,15 @@ synthesis <- "Ningaloo"
 
 # Load the data
 metadata <- readRDS(paste0("output/", synthesis, "_metadata.RDS")) %>%
-  dplyr::select(sample, longitude, latitude) %>%
+  dplyr::mutate(year = str_sub(time_stamp, 1, 4)) %>% # Dandy
+  dplyr::select(sample, year, longitude, latitude) %>%
   glimpse()
 
 length.raw <- readRDS("output/Ningaloo_length.RDS") %>%
   dplyr::mutate(fb_length_at_maturity = fb_length_at_maturity_cm * 10,
                 scientific = paste(genus, species, sep = " ")) %>%
   left_join(metadata) %>%
-  dplyr::select(sample, length, number, scientific,
+  dplyr::select(sample, year, length, number, scientific,
                 fb_length_at_maturity,
                 rls_thermal_niche) %>%
   glimpse()
