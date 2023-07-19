@@ -1,0 +1,90 @@
+genus,species,sex,l50.mm,location,marine.region,indicator.species,indicator.region,measurement.type,hermaphrodite,source
+Choerodon,rubescens,F,279,WA,SW/NW,Yes,WCD,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Choerodon,rubescens,M,479,WA,SW/NW,Yes,WCD,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Choerodon,rubescens,M,544,WA,SW/NW,Yes,WCD,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Choerodon,schoenleinii,F,252,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Choerodon,schoenleinii,M,556,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Choerodon,cyanodus,F,122,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Choerodon,cyanodus,M,221,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Nemadactylus,valenciennesi,B,400,WA,SW/NW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Epinephelides,armatus,F,306,WA,SW/NW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Epinephelides,armatus,M,256,WA,SW/NW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Epinephelus,coioides,F,575,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Epinephelus,coioides,M,925,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Epinephelus,malabaricus,F,803,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Epinephelus,malabaricus,M,1103,WA,SW/NW,No,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Plectropomus,leopardus,F,400,Abrolhos,SW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Plectropomus,leopardus,M,560,Abrolhos,SW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Glaucosoma,hebraicum,F,301,WA,SW/NW,Yes,WCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Glaucosoma,hebraicum,M,320,WA,SW/NW,Yes,WCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lethrinus,nebulosus,B,350,WA,SW/NW,Yes,GCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lethrinus,laticaudis,F,230,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lethrinus,laticaudis,M,190,Shark Bay,NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lethrinus,miniatus,F,280,WA,SW/NW,Yes,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lethrinus,miniatus,M,463,WA,SW/NW,Yes,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lethrinus,miniatus,M,481,WA,SW/NW,Yes,,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Centroberyx,gerrardi,F,282,South west,SW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Centroberyx,gerrardi,M,250,South west,SW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Centroberyx,gerrardi,F,288,West coast,SW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Centroberyx,gerrardi,M,250,West coast,SW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Centroberyx,gerrardi,F,384,Eastern south coast,SW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Centroberyx,gerrardi,M,516,Eastern south coast,SW,Yes,SCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,F,378,Carnarvon,NW,Yes,SCD/WCD/GCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,M,353,Carnarvon,NW,Yes,SCD/WCD/GCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,F,411,Shark Bay eastern gulf,NW,Yes,SCD/WCD/GCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,M,326,Shark Bay eastern gulf,NW,Yes,SCD/WCD/GCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,F,496,Shark Bay Freycinet,NW,Yes,SCD/WCD/GCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,M,390,Shark Bay Freycinet,NW,Yes,SCD/WCD/GCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,F,585,Metro,SW,Yes,SCD/WCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,M,566,Metro,SW,Yes,SCD/WCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,F,600,South coast,SW,Yes,SCD/WCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Chrysophrys,auratus,M,586,South coast,SW,Yes,SCD/WCD,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,sebae,F,461,Kimberley,NW,No,,TL,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,sebae,M,491,Kimberley,NW,No,,TL,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Achoerodus,gouldii,F,653,WA,SW/NW,Yes,SCD,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Achoerodus,gouldii,M,800,WA,SW/NW,Yes,SCD,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Achoerodus,gouldii,M,850,WA,SW/NW,Yes,SCD,,protygenous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Seriola,hippos,F,831,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Scomberomorus,semifasciatus,F,700,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Scomberomorus,semifasciatus,M,660,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Scomberomorus,commerson,F,790,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Scomberomorus,commerson,M,630,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Coryphaena,hippurus,F,457,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Coryphaena,hippurus,M,476,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Carcharhinus,plumbeus,F,1360,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Carcharhinus,obscurus,F,2540,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lates,calcarifer,B,550,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lates,calcarifer,B,600,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Cnidoglanis,macrocephalus,F,405,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Cnidoglanis,macrocephalus,F,419,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Cnidoglanis,macrocephalus,M,385,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,johnii,F,560,NT,N,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,johnii,M,520,NT,N,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Platycephalus,endrachtenis,F,259,Swan River,SW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Platycephalus,endrachtenis,M,187,Swan River,SW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Platycephalus,speculator,F,250,Wilson Inlet,SW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Platycephalus,speculator,M,325,Wilson Inlet,SW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Argyrosomus,japonicus,F,903,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Argyrosomus,japonicus,M,873,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Protonibea,diacanthus,F,890,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,argentimaculatus,F,461,Pilbara,NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,argentimaculatus,M,452,Pilbara,NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,argentimaculatus,F,498,Kimberley,NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Lutjanus,argentimaculatus,M,472,Kimberley,NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Sphryaena,novaehollandiae,F,400,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Sphryaena,novaehollandiae,M,420,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Pomatomus,saltatrix,B,330,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Polydactylus,macrochir,M,229,WA,SW/NW,No,,,protandrous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Polydactylus,macrochir,F,814,WA,SW/NW,No,,,protandrous,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Pseudocaranx,spp,B,310,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Arripis,truttaceus,B,600,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Arripis,truttaceus,B,650,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Sillaginodes,punctatus,F,410,WA,SW/NW,No,,,,A REVIEW OF SIZE LIMITS FOR FINFISH IN WESTERN AUSTRALIA Discussion Paper
+Polyprion,oxygeneios,F,760,South coast,SW,Yes,WCO,TL,,"Age-based demography and reproduction of hapuku, Polyprion oxygeneios, from the south coast of Western Australia: implications for management | ICES Journal of Marine Science | Oxford Academic"
+Polyprion,oxygeneios,M,702,South coast,SW,Yes,WCO,TL,,"Age-based demography and reproduction of hapuku, Polyprion oxygeneios, from the south coast of Western Australia: implications for management | ICES Journal of Marine Science | Oxford Academic"
+Hyporthodus,octofasciatus,B,560,Tropical,NW/SW,Yes,WCO,TL,,Contrasting life history characteristics of the eightbar grouper Hyporthodus octofasciatus (Pisces: Epinephelidae) over a large latitudinal range reveals spawning omission at higher latitudes | ICES Journal of Marine Science | Oxford Academic
+Lethrinus,punctulatus,B,206,WA,SW/NW,Yes,,FL,,fish.gov.au
+Epinephelus,multinotatus,B,391,WA,SW/NW,Yes,,FL,,fish.gov.au
+Pristipomoides,multidens,B,526,WA,SW/NW,Yes,GCD,TL,,fish.gov.au
+Hyperoglyphe,antarctica,F,720,WA,SW/NW,Yes,WCO,TL,,fish.gov.au
+Hyperoglyphe,antarctica,M,620,WA,SW/NW,Yes,WCO,TL,,fish.gov.au

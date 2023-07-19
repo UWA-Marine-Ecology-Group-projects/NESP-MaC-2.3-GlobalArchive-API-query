@@ -19,6 +19,12 @@ indicator_species <- c("Chrysophrys auratus",
                        "Lethrinus nebulosus")
 
 
+lm <- read_csv("data/raw/fish.indicator.species - WA fisheries Lm.csv") %>%
+  dplyr::mutate(marine.region = strsplit(as.character(marine.region), split = "/")) %>% # Create a new row for every qualifier - step 1
+  unnest(marine.region) %>%
+  dplyr::group_by(genus, species) %>% # should add region here if we were doing it properly
+  dplyr::summarise(species_lm = max(l50.mm)/10)
+
 # Read in marine parks ----
 marineparks <- readRDS("data/spatial/marineparks.RDS")
 
@@ -50,7 +56,12 @@ ga.api.species.list <- function() {
     raw_connection <- rawConnection(raw_content, "rb")
 
     # Read the Feather file from the input stream
-    species_list <- arrow::read_feather(raw_connection)
+    species_list <- arrow::read_feather(raw_connection) %>%
+      as.data.frame() %>%
+      left_join(lm) %>%
+      dplyr::mutate(fb_length_at_maturity_cm = if_else(is.na(species_lm), fb_length_at_maturity_cm, species_lm))
+
+    names(species_list)
 
   } else {
     # Request was not successful
