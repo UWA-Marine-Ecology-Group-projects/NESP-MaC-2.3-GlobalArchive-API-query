@@ -88,6 +88,8 @@ heights <- bind_rows(lengths, points) %>%
   dplyr::mutate(campaignid = "2022-05_PtCloates_stereo-BOSS") %>%
   dplyr::select(campaignid, sample, code, length, number, range, rms, precision)
 
+362/1888
+
 # Add habitat levels ----
 heights.with.levels <- left_join(heights, levels)
 
