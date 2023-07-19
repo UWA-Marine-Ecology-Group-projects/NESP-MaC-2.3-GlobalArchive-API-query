@@ -44,7 +44,7 @@ length.indicators <- length.raw %>%
   dplyr::filter(scientific %in% c("Choerodon rubescens",
                                   "Chrysophrys auratus",
                                   "Glaucosoma hebraicum")) %>%
-  dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
+  # dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
   glimpse()
 
 metadata.length <- length.raw %>%
@@ -56,7 +56,7 @@ species <- length.raw %>%
   dplyr::filter(scientific %in% c("Choerodon rubescens",
                                   "Chrysophrys auratus",
                                   "Glaucosoma hebraicum")) %>%
-  dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
+  # dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
   right_join(metadata.length) %>%
   complete(sample, nesting(scientific, fb_length_at_maturity)) %>%
   dplyr::filter(!is.na(scientific)) %>%
