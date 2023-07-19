@@ -33,7 +33,7 @@ length.raw <- readRDS("output/Ningaloo_length.RDS") %>%
   glimpse()
 
 cti <- length.raw %>%
-  dplyr::select(sample, scientific, rls_thermal_niche) %>%
+  dplyr::select(sample, year, scientific, rls_thermal_niche) %>%
   dplyr::filter(!is.na(rls_thermal_niche)) %>%
   glimpse()
 
@@ -41,7 +41,7 @@ write.csv(cti, paste0("data/tidy/", synthesis,"_cti.csv"),
           row.names = F)
 
 length.indicators <- length.raw %>%
-  dplyr::select(sample, length, number, scientific, fb_length_at_maturity) %>%
+  dplyr::select(sample, year, length, number, scientific, fb_length_at_maturity) %>%
   dplyr::filter(scientific %in% c("Lethrinus nebulosus",
                                   "Chrysophrys auratus",
                                   "Pristipomoides multidens")) %>%
@@ -49,7 +49,7 @@ length.indicators <- length.raw %>%
   glimpse()
 
 metadata.length <- length.raw %>%
-  distinct(sample) %>%
+  distinct(sample, year) %>%
   glimpse()
 
 species <- length.raw %>%
@@ -59,7 +59,7 @@ species <- length.raw %>%
                                   "Pristipomoides multidens")) %>%
   dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
   right_join(metadata.length) %>%
-  complete(sample, nesting(scientific, fb_length_at_maturity)) %>%
+  complete(nesting(sample, year), nesting(scientific, fb_length_at_maturity)) %>%
   dplyr::filter(!is.na(scientific)) %>%
   glimpse()
 
@@ -126,7 +126,8 @@ plot_size_of_maturity <- function(dat, plot.types, scientific.names, tidy.name) 
     geom_boxplot(outlier.shape = NA) +
     geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
     labs(x = tidy.name, y = "Abundance") +
-    theme_classic()
+    theme_classic() +
+    facet_wrap(~year)
 
   if (plot.types == 1) {
     ggsave(filename = paste0("plots/", paste(synthesis, "length.maturity", scientific.names,
@@ -177,7 +178,8 @@ ggplot(data = length.raw %>% dplyr::mutate(title = "Community Thermal Index"),
   geom_boxplot(outlier.shape = NA) +
   geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
   labs(x = NULL, y = "Community Thermal Index (CTI)") +
-  theme_classic()
+  theme_classic() +
+  facet_wrap(~year)
 
 ggsave(filename = paste0("plots/", paste(synthesis,"community-thermal-index",
                                          "boxplot.png", sep = "_")),
