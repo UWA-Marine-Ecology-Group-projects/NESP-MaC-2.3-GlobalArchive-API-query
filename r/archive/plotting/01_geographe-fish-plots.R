@@ -17,57 +17,68 @@ library(arrow)
 # Set synthesis
 synthesis <- "Geographe-bay"
 
+### Tidy Data and export to csv ----
+
 # Load the data
 metadata <- readRDS(paste0("output/", synthesis, "_metadata.RDS")) %>%
-  dplyr::select(sample, longitude, latitude) %>%
+  dplyr::filter(successful_length = TRUE) %>%
+  dplyr::select(sample, longitude, latitude, location, depth, successful_count, successful_length,
+                status, zone) %>%
   glimpse()
 
+# Read in lengths and join with metadata
 length.raw <- readRDS(paste0("output/", synthesis, "_length.RDS")) %>%
   dplyr::mutate(fb_length_at_maturity = fb_length_at_maturity_cm * 10,
                 scientific = paste(genus, species, sep = " ")) %>%
   left_join(metadata) %>%
-  dplyr::select(sample, length, number, scientific,
-                fb_length_at_maturity,
-                rls_thermal_niche) %>%
+  dplyr::filter(successful_length = TRUE) %>%
+  dplyr::select(sample, longitude, latitude, length, number,
+                scientific, fb_length_at_maturity, rls_thermal_niche,
+                location, depth, successful_count,successful_length, status, zone) %>%
   glimpse()
 
-cti <- length.raw %>%
-  dplyr::select(sample, scientific, rls_thermal_niche) %>%
-  dplyr::filter(!is.na(rls_thermal_niche)) %>%
-  glimpse()
-
-write.csv(cti, paste0("data/tidy/", synthesis,"_cti.csv"),
-          row.names = F)
-
+# Filter the length data to include only indicator species
 length.indicators <- length.raw %>%
-  dplyr::select(sample, length, number, scientific, fb_length_at_maturity) %>%
-  dplyr::filter(scientific %in% c("Choerodon rubescens",
+  dplyr::filter(scientific %in% c("Choerodon rubescens",                        # To be replaced with selection from column
                                   "Chrysophrys auratus",
                                   "Glaucosoma hebraicum")) %>%
-  # dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
   glimpse()
 
+# Create length metadata for use in functions
 metadata.length <- length.raw %>%
   distinct(sample) %>%
   glimpse()
 
+# Create indicator specific metadata for use in functions
 species <- length.raw %>%
   dplyr::select(sample, scientific, fb_length_at_maturity) %>%
-  dplyr::filter(scientific %in% c("Choerodon rubescens",
+  dplyr::filter(scientific %in% c("Choerodon rubescens",                        # To be replaced with selection from column
                                   "Chrysophrys auratus",
                                   "Glaucosoma hebraicum")) %>%
-  # dplyr::mutate(fb_length_at_maturity = ifelse(scientific %in% "Choerodon rubescens", 479, fb_length_at_maturity)) %>%
   right_join(metadata.length) %>%
   complete(sample, nesting(scientific, fb_length_at_maturity)) %>%
   dplyr::filter(!is.na(scientific)) %>%
+  left_join(metadata) %>%
   glimpse()
 
+# Create Community Thermal Index data from lengths + 3D points
+cti <- length.raw %>%
+  dplyr::filter(!is.na(rls_thermal_niche)) %>%
+  dplyr::select(-fb_length_at_maturity) %>%
+  dplyr::rename(community_thermal_index = rls_thermal_niche) %>%
+  glimpse()
+
+# Save out as a csv
+write.csv(cti, paste0("data/tidy/", synthesis,"_cti.csv"),
+          row.names = F)
+
+# Function to create abundance by size of maturity data
 sizeclass_by_abundance <- function(data, metadata, species, min, max, label) {
   # For the function to run you need
   # Metadata - dataframe with 1 column of all samples
   # Species - dataframe with each indicator species for all samples
   tempdat <- data %>%
-    dplyr::filter(length > (fb_length_at_maturity * min) & length < (fb_length_at_maturity * max)) %>%
+    dplyr::filter(length > fb_length_at_maturity * min & length < fb_length_at_maturity * max) %>%
     dplyr::group_by(sample, scientific) %>%
     dplyr::summarise(number = sum(number)) %>%
     right_join(species) %>%
@@ -76,7 +87,7 @@ sizeclass_by_abundance <- function(data, metadata, species, min, max, label) {
     ungroup()
 
   tempdat <- data %>%
-    dplyr::filter(length > (fb_length_at_maturity * min) & length < (fb_length_at_maturity * max)) %>%
+    dplyr::filter(length > fb_length_at_maturity * min & length < fb_length_at_maturity * max) %>%
     dplyr::group_by(sample) %>%
     dplyr::summarise(number = sum(number)) %>%
     right_join(metadata) %>%
@@ -89,6 +100,7 @@ sizeclass_by_abundance <- function(data, metadata, species, min, max, label) {
 
 }
 
+# Run the function for each size class
 sizeclass_by_abundance(length.indicators, metadata.length, species, 0, 0.5, "0-50")
 sizeclass_by_abundance(length.indicators, metadata.length, species, 0.5, 1, "50-100")
 sizeclass_by_abundance(length.indicators, metadata.length, species, 1, 1.25, "100-125")
@@ -97,17 +109,18 @@ sizeclass_by_abundance(length.indicators, metadata.length, species, 1.5, Inf, ">
 sizeclass_by_abundance(length.indicators, metadata.length, species, 0, 1.0, "<Lm")
 sizeclass_by_abundance(length.indicators, metadata.length, species, 1.0, Inf, ">Lm")
 
-length <- bind_rows(`0-50`, `50-100`,
-                    `100-125`, `125-150`,
-                    `>150`, `<Lm`,
-                    `>Lm`) %>%
+# Join the abundance by size class data together
+length <- bind_rows(`0-50`, `50-100`, `100-125`, `125-150`, `>150`, `<Lm`, `>Lm`) %>%
   dplyr::mutate(size.class = factor(size.class,
                                     levels = c("0-50","50-100","100-125",
                                                "125-150","150+",">Lm", "<Lm"))) %>%
   glimpse()
 
+# Save abundance by size class data as a csv
 write.csv(length, file = paste0("data/tidy/", synthesis, "_size-of-maturity.csv"),
           row.names = F)
+
+### Plotting data and export to png ----
 
 # Boxplot for size of maturity
 plot_size_of_maturity <- function(dat, plot.types, scientific.names, tidy.name) {
