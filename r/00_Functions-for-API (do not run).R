@@ -2,22 +2,24 @@ username <- "test"
 password <- "gatesttest"
 
 # Define the Indicator species ----
-indicator_species <- c("Chrysophrys auratus",
-                       "Choerodon rubescens",
-                       "Glaucosoma hebraicum",
-                       "Epinephelides armatus",
-                       "Centroberyx gerrardi",
-                       "Nemadactylus valenciennesi",
-                       "Achoerodus gouldii",
-                       "Polyprion oxygeneios",
-                       "Hyporthodus octofasciatus",
-                       "Hyperoglyphe antarctica",
-                       "Lethrinus punctulatus",
-                       "Epinephelus multinotatus",
-                       "Pristipomoides multidens",
-                       "Lethrinus miniatus",
-                       "Lethrinus nebulosus")
-
+# indicator_species <- c("Chrysophrys auratus",
+#                        "Choerodon rubescens",
+#                        "Glaucosoma hebraicum",
+#                        "Epinephelides armatus",
+#                        "Centroberyx gerrardi",
+#                        "Nemadactylus valenciennesi",
+#                        "Achoerodus gouldii",
+#                        "Polyprion oxygeneios",
+#                        "Hyporthodus octofasciatus",
+#                        "Hyperoglyphe antarctica",
+#                        "Lethrinus punctulatus",
+#                        "Epinephelus multinotatus",
+#                        "Pristipomoides multidens",
+#                        "Lethrinus miniatus",
+#                        "Lethrinus nebulosus")
+indicator_species <- read_csv("data/raw/fish.indicator.species - indicator species.csv") %>%
+  dplyr::select(genus, species) %>%
+  dplyr::mutate(indicator = "Yes")
 
 lm <- read_csv("data/raw/fish.indicator.species - WA fisheries Lm.csv") %>%
   dplyr::mutate(marine.region = strsplit(as.character(marine.region), split = "/")) %>% # Create a new row for every qualifier - step 1
@@ -184,7 +186,8 @@ ga.api.count <- function(synthesis_id) {
     # Read the Feather file from the input stream
     count <- arrow::read_feather(raw_connection) %>%
       mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
-      left_join(., species_list, by = "subject")
+      left_join(., species_list, by = "subject") %>%
+      left_join(., indicator_species)
 
   } else {
     # Request was not successful
@@ -214,7 +217,8 @@ ga.api.length <- function(synthesis_id) {
     # Read the Feather file from the input stream
     length <- arrow::read_feather(raw_connection)%>%
       mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
-      left_join(., species_list, by = "subject")
+      left_join(., species_list, by = "subject") %>%
+      left_join(., indicator_species)
 
   } else {
     # Request was not successful
