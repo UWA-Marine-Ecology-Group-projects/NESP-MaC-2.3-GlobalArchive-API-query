@@ -17,7 +17,7 @@ library(sf)
 # TODO turn this into a package.
 source("r/00_Functions-for-API (do not run).R")
 
-synthesis_id <- 15 # For Ningaloo Fish synthesis
+synthesis_id <- 15 # For Ningaloo Fish + Habitat Syntheses
 
 # API call for Metadata ----
 metadata <- ga.api.metadata(synthesis_id)
