@@ -255,8 +255,8 @@ ga.api.habitat <- function(synthesis_id) {
 
 }
 
-# Extract Habitat Length ----
-ga.api.habitat.length <- function(synthesis_id) {
+# Extract Habitat Height ----
+ga.api.habitat.height <- function(synthesis_id) {
   # URL
   url <- paste0("https://gaiastaging.duckdns.org/api/data/SynthesisBenthosLengthEntry/?sample__synthesis=", synthesis_id, "&format=feather")
 
@@ -272,7 +272,7 @@ ga.api.habitat.length <- function(synthesis_id) {
     raw_connection <- rawConnection(raw_content, "rb")
 
     # Read the Feather file from the input stream
-    habitat_length <- arrow::read_feather(raw_connection) %>%
+    habitat_height <- arrow::read_feather(raw_connection) %>%
       mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveBenthicList")) %>%
       left_join(., habitat_list, by = "subject")
 
@@ -281,7 +281,7 @@ ga.api.habitat.length <- function(synthesis_id) {
     cat("Request failed with status code:", status_code(response))
   }
 
-  return(habitat_length)
+  return(habitat_height)
 
 }
 
