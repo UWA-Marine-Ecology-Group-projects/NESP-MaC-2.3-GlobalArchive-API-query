@@ -33,7 +33,7 @@ length <- ga.api.length(synthesis_id) %>%
 cti <- length %>%
   dplyr::filter(!is.na(community_thermal_index)) %>% # to keep all fish (including those that do not have a CTI) turn this off with a #
   dplyr::select(-length_at_maturity) %>%
-  glimpse()
+  dplyr::mutate(year = str_sub(time_stamp, 1, 4))
 
 # Save CTI data as a csv ----
 write.csv(cti, paste0("data/tidy/", synthesis,"_CTI.csv"), row.names = F)
@@ -44,7 +44,8 @@ ggplot(data = cti %>% filter(!is.na(zone)), aes(x = zone, y = community_thermal_
   geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
   labs(x = "Zone", y = "Community Thermal Index (CTI)") +
   theme_classic() +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 15))
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 15)) +
+  facet_wrap(~ year)
 
 ggsave(filename = paste0("plots/", paste(synthesis,"community-thermal-index", "boxplot.png", sep = "_")),
-       plot = last_plot(), width = 8, height = 6, units = "in", dpi = 300)
+       plot = last_plot(), width = 12, height = 6, units = "in", dpi = 300)
