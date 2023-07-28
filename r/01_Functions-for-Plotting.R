@@ -20,6 +20,8 @@ aumpa <- st_read("data/spatial/AustraliaNetworkMarineParks.shp") %>%
   st_crop(e) %>%
   st_transform(4326)
 
+plot(aumpa)
+
 aumpa_fills <- scale_fill_manual(values = c("National Park Zone" = "#7bbc63",
                                             "Habitat Protection Zone" = "#fff8a3",# Commonwealth MPA colours
                                             # "Habitat Protection Zone (Reefs)" = "#fbff85",

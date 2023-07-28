@@ -19,7 +19,7 @@ sf_use_s2(F)
 library(ggnewscale)
 
 # Set cropping limit to speed up plotting
-e <- ext(113, 114, -23, -22)
+e <- ext(113, 115, -23, -20)
 
 # Bring in functions for API call ----
 # TODO turn this into a package.
@@ -56,7 +56,10 @@ ggplot() +
   geom_sf(data = cwatr, colour = "firebrick", alpha = 4/5, size = 0.3) +
   new_scale_fill()+
   geom_scatterpie(aes(x = longitude, y = latitude), data = habitat,
-                  cols = c("Substrate", "Sessile invertebrates","Sponges", "Cnidaria"),
+                  cols = c("Cnidaria",
+                           "Sessile invertebrates",
+                           "Sponges",
+                           "Substrate"),
                   pie_scale = 1, colour = NA) +
   labs(fill = "Habitat", x = 'Longitude', y = 'Latitude')+
   hab_cols +
@@ -71,3 +74,4 @@ ggplot() +
 ggsave(filename = paste0("plots/", paste(synthesis,"habitat",
                                          "scatterpies.png", sep = "_")),
        units = "in", dpi = 300, height = 8, width = 6)
+

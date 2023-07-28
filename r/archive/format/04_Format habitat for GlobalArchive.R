@@ -28,6 +28,57 @@ levels <- read_csv("data/benthic.annotation.schema.forward.facing.20230714.13511
   dplyr::select(-c(qualifiers, Parent_CAAB))
 
 # Read in habitat data to clean
+fw.data <- read.delim("data/raw/ningaloo/2019-08_ningaloo_forwards_Dot Point Measurements.txt", skip = 4, na.strings = "") %>%
+  ga.clean.names() %>%
+  dplyr::select(filename, image.row, image.col, broad, morphology, type, code) %>% # Keep period in for BOSS
+  dplyr::mutate(code = as.character(code)) %>%
+  dplyr::filter(!is.na(broad)) %>% # remove not annotated points
+  dplyr::mutate(opcode= str_replace_all(.$filename, c(".jpg" = ""))) %>%
+  dplyr::mutate(direction = "forwards")
+
+bw.data <- read.delim("data/raw/ningaloo/2019-08_ningaloo_backwards_Dot Point Measurements.txt", skip = 4, na.strings = "") %>%
+  ga.clean.names() %>%
+  dplyr::select(filename, image.row, image.col, broad, morphology, type, code) %>% # Keep period in for BOSS
+  dplyr::mutate(code = as.character(code)) %>%
+  dplyr::filter(!is.na(broad)) %>% # remove not annotated points
+  dplyr::mutate(opcode= str_replace_all(.$filename, c(".jpg" = "", ".JPG" = "")))%>%
+  dplyr::mutate(direction = "backwards")
+
+unique(fw.data$opcode)
+unique(bw.data$opcode)
+
+data <- bind_rows(fw.data, bw.data)
+
+data.with.stone <- left_join(data, stone)
+find.missing <- data.with.stone %>% dplyr::filter(is.na(clean.code)) # none missing
+codes.dont.match <- data.with.stone %>% dplyr::filter(!code %in% clean.code) # some original codes are NA
+
+unique(codes.dont.match$broad)
+
+# Now data has correct CAAB code can join with the correct schema (L1 - L5)
+data.with.levels <- data.with.stone %>%
+  dplyr::mutate(code = clean.code) %>%
+  dplyr::left_join(levels) %>%
+  dplyr::select(-c(broad, morphology, type, fine, clean.code))
+
+missing.level <- data.with.levels %>%
+  dplyr::filter(is.na(level_1)) # none = good
+
+summarised <- data.with.levels %>%
+  dplyr::mutate(count = 1) %>%
+  dplyr::group_by(opcode, code, level_1, level_2, level_3, level_4, level_5, level_6, level_7, level_8, family, genus, species) %>%
+  dplyr::summarise(count = sum(count)) %>%
+  dplyr::rename(sample = opcode) %>%
+  dplyr::mutate(campaignid = "2019-08_Ningaloo_stereo-BRUVs") %>%
+  dplyr::rename(caab_code = code)
+
+names(data.with.levels)
+
+write.csv(summarised, "data/syntheses/ningaloo/2019-08_Ningaloo_stereo-BRUVs_habitat.csv")
+
+
+
+# Read in habitat data to clean
 data <- read.delim("data/raw/ningaloo/2022-05_PtCloates_stereo-BRUVS_Forwards_Dot Point Measurements.txt", skip = 4, na.strings = "") %>%
   ga.clean.names() %>%
   dplyr::select(opcode, image.row, image.col, broad, morphology, type, code) %>% # Keep period in for BOSS
