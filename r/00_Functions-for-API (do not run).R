@@ -430,4 +430,3 @@ plot_size_of_maturity <- function(length_bins_2, length_bins_5) {
 
   }
 }
-

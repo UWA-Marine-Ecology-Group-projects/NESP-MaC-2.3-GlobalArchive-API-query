@@ -14,7 +14,6 @@ library(rgdal)
 library(sf)
 library(cowplot)
 
-
 # Bring in functions for API call ----
 # TODO turn this into a package.
 source("r/00_Functions-for-API (do not run).R")
