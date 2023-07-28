@@ -147,7 +147,8 @@ ga.api.metadata <- function(synthesis_id) {
     # Add in marine spatial zoning information ----
     metadata <- bind_cols(metadata_raw, over(metadata_spatial, marineparks)) %>%
       dplyr::rename(zone = ZONE_TYPE) %>%
-      tidyr::replace_na(list(status = "Fished"))
+      tidyr::replace_na(list(status = "Fished")) %>%
+      dplyr::select(sample, status, zone, site, location, longitude, latitude, depth, successful_count, successful_length, time_stamp)
 
     metadata$zone <- fct_relevel(metadata$zone,
                                  "National Park Zone",
@@ -215,10 +216,14 @@ ga.api.length <- function(synthesis_id) {
     raw_connection <- rawConnection(raw_content, "rb")
 
     # Read the Feather file from the input stream
-    length <- arrow::read_feather(raw_connection)%>%
+    length <- arrow::read_feather(raw_connection) %>%
       mutate(subject = str_replace_all(.$subject, "AnnotationSubject", "GlobalArchiveAustralianFishList")) %>%
       left_join(., species_list, by = "subject") %>%
-      left_join(., indicator_species)
+      left_join(., indicator_species) %>%
+      dplyr::mutate(length_at_maturity = fb_length_at_maturity_cm * 10,
+                    scientific = paste(genus, species, sep = " "),
+                    community_thermal_index = rls_thermal_niche) %>%
+      dplyr::select(sample, caab, family, scientific, genus, species, length, number, range, rms, precision, length_at_maturity, community_thermal_index, indicator)
 
   } else {
     # Request was not successful
@@ -287,5 +292,142 @@ ga.api.habitat.height <- function(synthesis_id) {
 
   return(habitat_height)
 
+}
+
+# Function to create abundance by size of maturity data
+ga.five.bins.maturity <- function(complete_data) {
+
+  temp_metadata <- complete_data %>%
+    dplyr::distinct(sample, status, zone, site, location, longitude, latitude, depth, successful_count, successful_length, scientific, time_stamp)
+
+  bins <- data.frame(min = c(0,        0.5,      1,         1.25,      1.5),
+                     max = c(0.5,      1,        1.25,      1.5,       Inf),
+                     label = c("0-50", "50-100", "100-125", "125-150", "150+"))
+
+  binned <- data.frame()
+
+  for(bin in unique(bins$label)) {
+
+    dat <- bins %>%
+      dplyr::filter(label %in% bin)
+
+    min <- unique(dat$min)
+    max <- unique(dat$max)
+
+    temp_species <- complete_data %>%
+      dplyr::filter(length > length_at_maturity * min & length < length_at_maturity * max) %>%
+      dplyr::group_by(sample, scientific) %>%
+      dplyr::summarise(number = sum(number)) %>%
+      dplyr::ungroup() %>%
+      dplyr::select(sample, scientific, number) %>%
+      dplyr::full_join(temp_metadata) %>%
+      dplyr::mutate(number = replace_na(number, 0)) %>%
+      dplyr::mutate(size.class = bin) %>%
+      dplyr::filter(!is.na(scientific))
+
+    temp <- temp_species %>%
+      dplyr::group_by(sample) %>%
+      dplyr::summarise(number = sum(number)) %>%
+      ungroup() %>%
+      dplyr::mutate(size.class = bin, scientific = "All indicator species") %>%
+      left_join(., temp_metadata %>% dplyr::select(-c(scientific)) %>% distinct()) %>%
+      bind_rows(temp_species)
+
+    binned <- bind_rows(binned, temp)
+
+  }
+
+  binned$size.class <- fct_relevel(binned$size.class, c("0-50", "50-100", "100-125", "125-150", "150+"))
+
+  return(binned)
+
+}
+
+# Function to create abundance by size of maturity data
+ga.two.bins.maturity <- function(complete_data) {
+
+  temp_metadata <- complete_data %>%
+    dplyr::distinct(sample, status, zone, site, location, longitude, latitude, depth, successful_count, successful_length, scientific, time_stamp)
+
+  bins <- data.frame(min = c(0,        1),
+                     max = c(1,        Inf),
+                     label = c("<Lm", ">Lm"))
+
+  binned <- data.frame()
+
+  for(bin in unique(bins$label)) {
+
+    dat <- bins %>%
+      dplyr::filter(label %in% bin)
+
+    min <- unique(dat$min)
+    max <- unique(dat$max)
+
+    temp_species <- complete_data %>%
+      dplyr::filter(length > length_at_maturity * min & length < length_at_maturity * max) %>%
+      dplyr::group_by(sample, scientific) %>%
+      dplyr::summarise(number = sum(number)) %>%
+      dplyr::ungroup() %>%
+      dplyr::select(sample, scientific, number) %>%
+      dplyr::full_join(temp_metadata) %>%
+      dplyr::mutate(number = replace_na(number, 0)) %>%
+      dplyr::mutate(size.class = bin) %>%
+      dplyr::filter(!is.na(scientific))
+
+    temp <- temp_species %>%
+      dplyr::group_by(sample) %>%
+      dplyr::summarise(number = sum(number)) %>%
+      ungroup() %>%
+      dplyr::mutate(size.class = bin, scientific = "All indicator species") %>%
+      left_join(., temp_metadata %>% dplyr::select(-c(scientific)) %>% distinct()) %>%
+      bind_rows(temp_species)
+
+    binned <- bind_rows(binned, temp)
+
+  }
+
+  binned$size.class <- fct_relevel(binned$size.class, c("<Lm", ">Lm"))
+
+  return(binned)
+
+}
+
+
+plot_size_of_maturity <- function(length_bins_2, length_bins_5) {
+
+  length_bins_2 <- length_bins_2 %>%
+    dplyr::mutate(year = str_sub(time_stamp, 1, 4))
+
+  length_bins_5 <- length_bins_5 %>%
+    dplyr::mutate(year = str_sub(time_stamp, 1, 4))
+
+  length_bins_2$size.class <- fct_relevel(length_bins_2$size.class, c("<Lm", ">Lm"))
+
+  length_bins_5$size.class <- fct_relevel(length_bins_5$size.class, c("0-50", "50-100", "100-125", "125-150", "150+"))
+
+  for(species in unique(length_bins_2$scientific)){
+
+    p1 <- ggplot(data = length_bins_2 %>% dplyr::filter(scientific %in% species),
+                 aes(x = size.class, y = number)) +
+      geom_boxplot(outlier.shape = NA) +
+      geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
+      labs(x = species, y = "Abundance") +
+      theme_classic() +
+      facet_wrap(~ year)
+
+    p2 <- ggplot(data = length_bins_5 %>% dplyr::filter(scientific %in% species),
+                 aes(x = size.class, y = number)) +
+      geom_boxplot(outlier.shape = NA) +
+      geom_point(alpha = 0.2, position = position_jitter(w = 0.1, h = 0)) +
+      labs(x = species, y = "Abundance") +
+      theme_classic() +
+      facet_wrap(~ year)
+
+    p <- plot_grid(p1, p2, ncol = 1)
+
+    ggsave(filename = paste0("plots/", paste(synthesis, "length.maturity", species, "boxplot.png", sep = "_")),
+           plot = p, width = 8, height = 12, units = "in", dpi = 300)
+
+  }
 }
 
