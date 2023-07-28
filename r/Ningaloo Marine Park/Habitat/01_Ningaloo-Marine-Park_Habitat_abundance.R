@@ -74,4 +74,3 @@ ggplot() +
 ggsave(filename = paste0("plots/", paste(synthesis,"habitat",
                                          "scatterpies.png", sep = "_")),
        units = "in", dpi = 300, height = 8, width = 6)
-
